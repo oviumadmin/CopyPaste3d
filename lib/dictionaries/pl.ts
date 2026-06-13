@@ -15,7 +15,7 @@ export const pl = {
     messages: [
       "Standardowa realizacja: 2–5 dni roboczych",
       "Skanowanie 3D z dojazdem — przyjeżdżamy do Ciebie (Wielkopolska)",
-      "Druk wielokolorowy AMS — do 4 kolorów w jednym wydruku",
+      "Druk wielokolorowy — do 4 kolorów w jednym wydruku",
     ],
   },
 
@@ -52,7 +52,7 @@ export const pl = {
     items: [
       {
         title: "Druk wielokolorowy w jednym przebiegu",
-        body: "System AMS 2 Pro drukuje do 4 kolorów w jednym wydruku — bez ręcznego malowania i bez sklejania. Logo, oznaczenia i detale wychodzą prosto z drukarki.",
+        body: "Drukujemy do 4 kolorów w jednym przebiegu — bez ręcznego malowania i bez sklejania. Logo, oznaczenia i detale wychodzą prosto z druku.",
       },
       {
         title: "Skanowanie z dojazdem do klienta",
@@ -69,7 +69,7 @@ export const pl = {
     items: [
       {
         title: "Wielokolorowy druk FDM",
-        body: "Funkcjonalne części i ozdobne wydruki w PLA, PETG, TPU i ABS — do 4 kolorów w jednym przebiegu dzięki AMS 2 Pro.",
+        body: "Funkcjonalne części i ozdobne wydruki w PLA, PETG, ABS, ASA, TPU, PC, nylonie i kompozytach z włóknem (CF/GF) — do 4 kolorów w jednym przebiegu.",
         example: "Przykład: znacznik narzędziowy z kontrastowym opisem",
       },
       {
@@ -174,8 +174,8 @@ export const pl = {
   materials: {
     kicker: "Materiały i kolory",
     title: "Kolor drukujemy, nie malujemy",
-    lead: "AMS 2 Pro podaje do 4 filamentów w jednym wydruku. Wybierz kombinację poniżej i zobacz ją na modelu — dokładnie tak działa to na drukarce.",
-    visualizerTitle: "Wizualizer kolorów AMS",
+    lead: "Podajemy do 4 filamentów w jednym wydruku. Wybierz kombinację poniżej i zobacz ją na modelu — dokładnie tak działa to na druku.",
+    visualizerTitle: "Wizualizer kolorów",
     visualizerHint: "Kliknij slot, potem kolor z palety. Model obraca się — złap i przeciągnij.",
     slotLabel: "Slot",
     swatchesTitle: "Paleta filamentów",
@@ -184,45 +184,50 @@ export const pl = {
     materialNotes: [
       { name: "PLA", note: "uniwersalny, najlepsze detale, modele i figurki" },
       { name: "PETG", note: "wytrzymały, odporny na wilgoć, części użytkowe" },
-      { name: "TPU", note: "elastyczny jak guma, uszczelki i amortyzacja" },
       { name: "ABS", note: "odporny na temperaturę, części techniczne" },
+      { name: "ASA", note: "odporny na UV i pogodę, zastosowania zewnętrzne" },
+      { name: "TPU", note: "elastyczny jak guma, uszczelki i amortyzacja" },
+      { name: "PC", note: "poliwęglan — bardzo wytrzymały i termoodporny" },
+      { name: "PA", note: "nylon — odporny na ścieranie, elementy ruchome" },
+      { name: "CF", note: "wzmocnienie włóknem węglowym — sztywny i lekki" },
+      { name: "GF", note: "wzmocnienie włóknem szklanym — sztywny, stabilny wymiarowo" },
     ],
   },
 
-  hardware: {
-    kicker: "Sprzęt",
-    title: "Maszyny, na których pracujemy",
-    lead: "Konkretny, nowoczesny sprzęt — bez obietnic, których nie pokryje warsztat.",
+  capabilities: {
+    kicker: "Możliwości",
+    title: "Co potrafimy w warsztacie",
+    lead: "Konkretne możliwości, nie obietnice — tyle realnie dowieziemy w każdym projekcie.",
     items: [
       {
-        name: "Bambu Lab P1S",
-        role: "Drukarka FDM",
+        name: "Druk wielokolorowy",
+        role: "Kolor",
         specs: [
-          "Obszar roboczy 256 × 256 × 256 mm",
-          "Prędkość do 500 mm/s",
-          "Zamknięta komora — stabilne ABS",
-        ],
-      },
-      {
-        name: "AMS 2 Pro",
-        role: "System wielomateriałowy",
-        specs: [
-          "4 szpule, automatyczna zmiana",
           "Do 4 kolorów w jednym wydruku",
-          "Aktywne suszenie filamentu",
+          "Bez ręcznego malowania i sklejania",
+          "Automatyczna zmiana filamentu",
         ],
       },
       {
-        name: "Creality Otter",
-        role: "Skaner 3D",
+        name: "Duże pole robocze",
+        role: "Druk FDM",
         specs: [
-          "Światło strukturalne, ręczny",
-          "Dokładność do 0,02 mm",
-          "Obiekty do ok. 1 m — także z dojazdem",
+          "Obszar do 256 × 256 × 256 mm",
+          "Zamknięta komora — stabilne ABS, ASA, PC",
+          "Materiały od PLA po kompozyty CF/GF",
+        ],
+      },
+      {
+        name: "Skanowanie 3D",
+        role: "Digitalizacja",
+        specs: [
+          "Światło strukturalne, dokładność do 0,02 mm",
+          "Obiekty do ok. 1 m",
+          "Stacjonarnie albo z dojazdem do Ciebie",
         ],
       },
     ],
-    software: "Oprogramowanie: Fusion 360 · Meshmixer",
+    software: "Profesjonalne modelowanie CAD i obróbka siatek 3D",
   },
 
   estimator: {
@@ -246,7 +251,7 @@ export const pl = {
     controls: {
       material: "Materiał",
       colors: "Liczba kolorów",
-      colorsHint: "Druk wielokolorowy wykorzystuje system AMS — to nasz konik.",
+      colorsHint: "Druk wielokolorowy w jednym przebiegu — to nasz konik.",
       infill: "Wypełnienie",
       quantity: "Ilość sztuk",
     },
@@ -315,7 +320,7 @@ export const pl = {
       },
       {
         q: "Czy drukujecie z żywicy albo z metalu?",
-        a: "Nie — pracujemy w technologii FDM (PLA, PETG, TPU, ABS) i mówimy o tym wprost. Za to w FDM oferujemy coś, czego nie ma prawie nikt w okolicy: druk do 4 kolorów w jednym przebiegu.",
+        a: "Nie — pracujemy w technologii FDM i mówimy o tym wprost. Za to drukujemy z szerokiej gamy materiałów: PLA, PETG, ABS, ASA, TPU, PC, nylonu (PA) oraz kompozytów wzmacnianych włóknem węglowym (CF) i szklanym (GF) — a do tego do 4 kolorów w jednym przebiegu, czego nie ma prawie nikt w okolicy.",
       },
       {
         q: "Czy wydruk będzie wytrzymały?",

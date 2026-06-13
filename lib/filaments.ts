@@ -1,4 +1,4 @@
-/** Filament swatch palette shown in the Materials section + AMS visualizer. */
+/** Filament swatch palette shown in the Materials section + color visualizer. */
 
 export interface FilamentSwatch {
   id: string;
@@ -22,5 +22,5 @@ export const filamentSwatches: FilamentSwatch[] = [
   { id: "magenta", name: { pl: "Magenta", en: "Magenta" }, hex: "#C026D3" },
 ];
 
-/** Default AMS slot assignment (indexes into filamentSwatches). */
-export const defaultAmsSlots = ["teal", "jade-white", "orange", "navy"];
+/** Default color-slot assignment (indexes into filamentSwatches). */
+export const defaultColorSlots = ["teal", "jade-white", "orange", "navy"];

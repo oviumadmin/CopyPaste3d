@@ -17,7 +17,7 @@ export const en: Dictionary = {
     messages: [
       "Standard turnaround: 2–5 business days",
       "On-site 3D scanning — we come to you (Wielkopolska region)",
-      "AMS multi-color printing — up to 4 colors in one print",
+      "Multi-color printing — up to 4 colors in one print",
     ],
   },
 
@@ -54,7 +54,7 @@ export const en: Dictionary = {
     items: [
       {
         title: "Multi-color printing in a single run",
-        body: "Our AMS 2 Pro system prints up to 4 colors in one job — no hand-painting, no gluing. Logos, markings and details come straight off the printer.",
+        body: "We print up to 4 colors in one job — no hand-painting, no gluing. Logos, markings and details come straight off the printer.",
       },
       {
         title: "On-site scanning — we come to you",
@@ -71,7 +71,7 @@ export const en: Dictionary = {
     items: [
       {
         title: "Multi-color FDM printing",
-        body: "Functional parts and display pieces in PLA, PETG, TPU and ABS — up to 4 colors in a single run thanks to the AMS 2 Pro.",
+        body: "Functional parts and display pieces in PLA, PETG, ABS, ASA, TPU, PC, nylon and fiber-reinforced composites (CF/GF) — up to 4 colors in a single run.",
         example: "Example: tool marker with high-contrast labeling",
       },
       {
@@ -176,8 +176,8 @@ export const en: Dictionary = {
   materials: {
     kicker: "Materials & colors",
     title: "We print color, we don't paint it",
-    lead: "The AMS 2 Pro feeds up to 4 filaments into a single print. Pick a combination below and see it on the model — that's exactly how it works on the printer.",
-    visualizerTitle: "AMS color visualizer",
+    lead: "We feed up to 4 filaments into a single print. Pick a combination below and see it on the model — that's exactly how it comes off the printer.",
+    visualizerTitle: "Color visualizer",
     visualizerHint: "Click a slot, then a color from the palette. The model rotates — grab and drag it.",
     slotLabel: "Slot",
     swatchesTitle: "Filament palette",
@@ -186,45 +186,50 @@ export const en: Dictionary = {
     materialNotes: [
       { name: "PLA", note: "all-rounder, best detail, models and figurines" },
       { name: "PETG", note: "tough, moisture-resistant, functional parts" },
-      { name: "TPU", note: "rubber-like flex, gaskets and dampers" },
       { name: "ABS", note: "heat-resistant, technical parts" },
+      { name: "ASA", note: "UV- and weather-resistant, outdoor use" },
+      { name: "TPU", note: "rubber-like flex, gaskets and dampers" },
+      { name: "PC", note: "polycarbonate — very strong and heat-resistant" },
+      { name: "PA", note: "nylon — abrasion-resistant, moving parts" },
+      { name: "CF", note: "carbon-fiber reinforced — stiff and light" },
+      { name: "GF", note: "glass-fiber reinforced — stiff, dimensionally stable" },
     ],
   },
 
-  hardware: {
-    kicker: "Hardware",
-    title: "The machines we run",
-    lead: "Specific, modern equipment — no promises the workshop can't back up.",
+  capabilities: {
+    kicker: "Capabilities",
+    title: "What we can do in the workshop",
+    lead: "Concrete capabilities, not promises — what we actually deliver on every project.",
     items: [
       {
-        name: "Bambu Lab P1S",
-        role: "FDM printer",
+        name: "Multi-color printing",
+        role: "Color",
         specs: [
-          "Build volume 256 × 256 × 256 mm",
-          "Speeds up to 500 mm/s",
-          "Enclosed chamber — reliable ABS",
-        ],
-      },
-      {
-        name: "AMS 2 Pro",
-        role: "Multi-material system",
-        specs: [
-          "4 spools, automatic switching",
           "Up to 4 colors in one print",
-          "Active filament drying",
+          "No hand-painting or gluing",
+          "Automatic filament switching",
         ],
       },
       {
-        name: "Creality Otter",
-        role: "3D scanner",
+        name: "Large build area",
+        role: "FDM printing",
         specs: [
-          "Structured light, handheld",
-          "Accuracy down to 0.02 mm",
-          "Objects up to ~1 m — on-site too",
+          "Build volume up to 256 × 256 × 256 mm",
+          "Enclosed chamber — reliable ABS, ASA, PC",
+          "Materials from PLA to CF/GF composites",
+        ],
+      },
+      {
+        name: "3D scanning",
+        role: "Digitization",
+        specs: [
+          "Structured light, accuracy down to 0.02 mm",
+          "Objects up to ~1 m",
+          "At our workshop or on-site at yours",
         ],
       },
     ],
-    software: "Software: Fusion 360 · Meshmixer",
+    software: "Professional CAD modeling and 3D mesh processing",
   },
 
   estimator: {
@@ -248,7 +253,7 @@ export const en: Dictionary = {
     controls: {
       material: "Material",
       colors: "Number of colors",
-      colorsHint: "Multi-color uses our AMS system — it's our specialty.",
+      colorsHint: "Multi-color in a single run — it's our specialty.",
       infill: "Infill",
       quantity: "Quantity",
     },
@@ -317,7 +322,7 @@ export const en: Dictionary = {
       },
       {
         q: "Do you print in resin or metal?",
-        a: "No — we work in FDM (PLA, PETG, TPU, ABS) and we're upfront about it. What we do offer in FDM is something almost nobody nearby has: up to 4 colors in a single run.",
+        a: "No — we work in FDM and we're upfront about it. What we do print is a broad range of materials: PLA, PETG, ABS, ASA, TPU, PC, nylon (PA) and carbon- (CF) and glass-fiber (GF) reinforced composites — plus up to 4 colors in a single run, which almost nobody nearby offers.",
       },
       {
         q: "Will the print be strong enough?",

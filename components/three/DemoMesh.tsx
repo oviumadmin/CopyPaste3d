@@ -5,7 +5,7 @@ import * as THREE from "three";
 import type { DemoModel } from "@/lib/portfolio";
 
 /**
- * Procedural stand-in geometry for portfolio pieces and the AMS visualizer,
+ * Procedural stand-in geometry for portfolio pieces and the color visualizer,
  * shown until real scanned STL files are supplied. Each model is built from
  * primitives so it carries zero asset weight.
  */

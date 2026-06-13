@@ -5,7 +5,11 @@
       "PowerShell($paths = @\\(\"$env:ProgramFiles\\\\nodejs\\\\node.exe\", \"$env:LOCALAPPDATA\\\\Programs\\\\nodejs\\\\node.exe\", \"$env:APPDATA\\\\nvm\", \"$env:LOCALAPPDATA\\\\nvs\", \"$env:USERPROFILE\\\\scoop\\\\apps\\\\nodejs\", \"$env:ProgramFiles\\\\nodejs\"\\); foreach \\($p in $paths\\) { if \\(Test-Path $p\\) { Write-Output \"FOUND: $p\" } }; Get-Command winget -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Source)",
       "Bash(which node *)",
       "PowerShell(winget install OpenJS.NodeJS.LTS --accept-source-agreements --accept-package-agreements --silent)",
-      "PowerShell($env:Path = [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"User\"\\); node --version; npm --version)"
+      "PowerShell($env:Path = [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"User\"\\); node --version; npm --version)",
+      "Bash(git rm *)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(git add *)",
+      "Bash(git -c 'user.name=Copy Paste 3D' -c user.email=hello@copypaste3d.com commit -q -m ' *)"
     ]
   }
 }

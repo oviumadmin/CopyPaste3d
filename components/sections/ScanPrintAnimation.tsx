@@ -9,7 +9,7 @@ import { motion, useReducedMotion } from "framer-motion";
  * top-to-bottom by a scanning beam. A dashed data stream carries it across
  * the gap. Right object: the "copy", printing itself bottom-up in layers,
  * a print head stepping upward as it grows. One ember layer hints at
- * multi-color AMS printing. Loops every 7 s.
+ * multi-color printing. Loops every 7 s.
  *
  * Under prefers-reduced-motion the same scene renders as a static frame:
  * original + finished copy, no animation.

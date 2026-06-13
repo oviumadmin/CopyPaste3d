@@ -1,22 +1,25 @@
-import { Printer, Boxes, ScanLine, Check } from "lucide-react";
+import { Layers, Maximize, ScanLine, Check } from "lucide-react";
 import type { Dictionary } from "@/lib/i18n";
 import { SectionHeader } from "../ui/SectionHeader";
 import { Reveal } from "../ui/Reveal";
 
-const ICONS = [Printer, Boxes, ScanLine];
+const ICONS = [Layers, Maximize, ScanLine];
 
-/** P1S + AMS 2 Pro + Otter scanner as trust signals with specs. */
-export function Hardware({ dict }: { dict: Dictionary }) {
+/**
+ * Capabilities as trust signals — stated as what we can do, without naming
+ * specific machines or software.
+ */
+export function Capabilities({ dict }: { dict: Dictionary }) {
   return (
     <section className="py-20 sm:py-24">
       <div className="section-wrap">
         <SectionHeader
-          kicker={dict.hardware.kicker}
-          title={dict.hardware.title}
-          lead={dict.hardware.lead}
+          kicker={dict.capabilities.kicker}
+          title={dict.capabilities.title}
+          lead={dict.capabilities.lead}
         />
         <div className="mt-12 grid gap-5 md:grid-cols-3">
-          {dict.hardware.items.map((item, i) => {
+          {dict.capabilities.items.map((item, i) => {
             const Icon = ICONS[i];
             return (
               <Reveal key={item.name} delay={i * 0.08}>
@@ -53,7 +56,7 @@ export function Hardware({ dict }: { dict: Dictionary }) {
         </div>
         <Reveal delay={0.1}>
           <p className="mt-8 text-center font-mono text-xs tracking-wide text-muted">
-            {dict.hardware.software}
+            {dict.capabilities.software}
           </p>
         </Reveal>
       </div>

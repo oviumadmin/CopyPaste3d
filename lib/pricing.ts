@@ -8,7 +8,16 @@
  * never a binding quote.
  */
 
-export type MaterialId = "PLA" | "PETG" | "TPU" | "ABS";
+export type MaterialId =
+  | "PLA"
+  | "PETG"
+  | "ABS"
+  | "ASA"
+  | "TPU"
+  | "PC"
+  | "PA"
+  | "CF"
+  | "GF";
 
 export const PRICING = {
   currency: "PLN",
@@ -20,8 +29,13 @@ export const PRICING = {
   materialRatePerCm3: {
     PLA: 0.5,
     PETG: 0.6,
-    TPU: 0.95,
     ABS: 0.65,
+    ASA: 0.7,
+    TPU: 0.95,
+    PC: 1.1, // polycarbonate
+    PA: 1.2, // nylon
+    CF: 1.6, // carbon-fiber reinforced
+    GF: 1.3, // glass-fiber reinforced
   } satisfies Record<MaterialId, number>,
 
   /**
@@ -31,7 +45,7 @@ export const PRICING = {
    */
   shellFraction: 0.25,
 
-  /** Multi-color (AMS) surcharges. */
+  /** Multi-color surcharges. */
   multiColor: {
     /** Flat fee per color beyond the first (extra spool handling). */
     perExtraColor: 12,
@@ -43,7 +57,7 @@ export const PRICING = {
 
   /** Print-time model. */
   time: {
-    /** Average deposition speed of the P1S on a typical part, cm³/h. */
+    /** Average deposition speed on a typical part, cm³/h. */
     cm3PerHour: 14,
     /** Machine + supervision rate per print hour. */
     ratePerHour: 9,

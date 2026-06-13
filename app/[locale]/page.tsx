@@ -10,7 +10,7 @@ import { Services } from "@/components/sections/Services";
 import { Process } from "@/components/sections/Process";
 import { Portfolio } from "@/components/sections/Portfolio";
 import { Materials } from "@/components/sections/Materials";
-import { Hardware } from "@/components/sections/Hardware";
+import { Capabilities } from "@/components/sections/Capabilities";
 import { Estimator } from "@/components/sections/Estimator";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { Faq } from "@/components/sections/Faq";
@@ -47,7 +47,7 @@ export default async function HomePage({
         <Process dict={dict} />
         <Portfolio dict={dict} />
         <Materials dict={dict} locale={locale} />
-        <Hardware dict={dict} />
+        <Capabilities dict={dict} />
         <Estimator dict={dict} locale={locale} />
         <Testimonials dict={dict} />
         <Faq dict={dict} />

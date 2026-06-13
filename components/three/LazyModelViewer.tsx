@@ -6,7 +6,7 @@ import { Loader2 } from "lucide-react";
 /**
  * Dynamic, client-only wrapper around ModelViewer. Keeps three.js out of
  * the initial bundle — it loads on demand (modal open, estimator upload,
- * AMS visualizer in view).
+ * color visualizer in view).
  */
 export const LazyModelViewer = dynamic(
   () => import("./ModelViewer").then((m) => m.ModelViewer),

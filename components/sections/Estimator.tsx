@@ -24,7 +24,17 @@ import { SectionHeader } from "../ui/SectionHeader";
 import { Reveal } from "../ui/Reveal";
 import { LazyModelViewer } from "../three/LazyModelViewer";
 
-const MATERIALS: MaterialId[] = ["PLA", "PETG", "TPU", "ABS"];
+const MATERIALS: MaterialId[] = [
+  "PLA",
+  "PETG",
+  "ABS",
+  "ASA",
+  "TPU",
+  "PC",
+  "PA",
+  "CF",
+  "GF",
+];
 const MAX_BYTES = 50 * 1024 * 1024;
 
 type Status =
@@ -262,7 +272,7 @@ export function Estimator({
                 <div className="flex h-full flex-col gap-5">
                   {/* material */}
                   <Control label={t.controls.material}>
-                    <div className="grid grid-cols-4 gap-2">
+                    <div className="grid grid-cols-3 gap-2 sm:grid-cols-5">
                       {MATERIALS.map((m) => (
                         <button
                           key={m}

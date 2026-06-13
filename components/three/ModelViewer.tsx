@@ -9,7 +9,7 @@ import { DemoMesh } from "./DemoMesh";
 
 /**
  * Shared rotatable/zoomable viewer (OrbitControls + Stage + Environment).
- * Used for portfolio demo pieces, the AMS visualizer and the estimator
+ * Used for portfolio demo pieces, the color visualizer and the estimator
  * preview. Loaded only via next/dynamic so three.js stays out of the
  * initial bundle.
  *

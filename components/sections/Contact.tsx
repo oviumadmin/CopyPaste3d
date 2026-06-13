@@ -76,7 +76,7 @@ export function Contact({
       data.append(
         f.quoteParams,
         `${s.material} · ${s.colors}× ${
-          s.colors > 1 ? "AMS" : ""
+          s.colors > 1 ? "multi-color" : ""
         } · ${s.infillPct}% · x${s.quantity}${
           s.volumeCm3 ? ` · ${s.volumeCm3.toFixed(1)} cm³` : ""
         }${price}`

@@ -2,13 +2,13 @@
 
 import { useState } from "react";
 import type { Dictionary, Locale } from "@/lib/i18n";
-import { filamentSwatches, defaultAmsSlots } from "@/lib/filaments";
+import { filamentSwatches, defaultColorSlots } from "@/lib/filaments";
 import { SectionHeader } from "../ui/SectionHeader";
 import { Reveal } from "../ui/Reveal";
 import { LazyModelViewer } from "../three/LazyModelViewer";
 
 /**
- * Materials & colors. The AMS visualizer assigns up to 4 filament colors to
+ * Materials & colors. The color visualizer assigns up to 4 filament colors to
  * the demo model's parts — pick a slot, pick a swatch, watch it change.
  * This demonstrates the multi-material story directly.
  */
@@ -22,7 +22,7 @@ export function Materials({
   const swatchById = (id: string) =>
     filamentSwatches.find((s) => s.id === id) ?? filamentSwatches[0];
 
-  const [slots, setSlots] = useState<string[]>(defaultAmsSlots);
+  const [slots, setSlots] = useState<string[]>(defaultColorSlots);
   const [activeSlot, setActiveSlot] = useState(0);
 
   const setSlotColor = (id: string) =>

@@ -2,7 +2,7 @@
 
 Production marketing site for **Copy Paste 3D**, a 3D scanning & printing studio
 in Kościan, Wielkopolska, Poland. Bilingual (PL primary / EN secondary), with an
-in-browser quote estimator, interactive 3D viewers, an AMS multi-color
+in-browser quote estimator, interactive 3D viewers, a multi-color filament
 visualizer, and a Formspree-wired contact + on-site-scan booking form.
 
 Built with Next.js 15 (App Router), TypeScript, Tailwind CSS, Framer Motion,
@@ -131,6 +131,8 @@ Zero-config on **Vercel** (recommended) or **Netlify**:
   (phone, address, NIP, REGON, domain) and as labelled image slots. Testimonials
   in the dictionaries are **sample** quotes — replace with real Google reviews,
   and point the reviews CTA at the Google Business profile.
-- Scope is strictly FDM (PLA/PETG/TPU/ABS) + structured-light scanning — no
-  resin/SLS/metal claims anywhere.
+- Scope is strictly FDM (PLA, PETG, ABS, ASA, TPU, PC, PA, plus CF/GF
+  fiber-reinforced composites) + structured-light scanning — no resin/SLS/metal
+  claims anywhere. The site advertises **capabilities, not specific machines**:
+  no printer/scanner/software brand names appear in the copy.
 ```
