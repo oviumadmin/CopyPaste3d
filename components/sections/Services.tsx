@@ -23,11 +23,11 @@ const ICONS = [Layers, ScanLine, DraftingCompass, Zap, Gift, Wrench];
  */
 const SERVICE_IMAGES: (string | null)[] = [
   "/services/multicolor-fdm.jpg",
-  null,
-  null,
-  null,
-  null,
-  null,
+  "/services/scanning.jpg",
+  "/services/reverse-engineering.jpg",
+  "/services/prototyping.jpg",
+  "/services/figurines.jpg",
+  "/services/cad-consulting.jpg",
 ];
 
 /** Six services as cards, each with an image slot. */
