@@ -6,7 +6,7 @@ import { Accordion } from "../ui/Accordion";
 /** FAQ accordion. FAQPage schema is emitted from buildJsonLd (same items). */
 export function Faq({ dict }: { dict: Dictionary }) {
   return (
-    <section id="faq" className="scroll-mt-24 py-20 sm:py-24">
+    <section id="faq" className="scroll-mt-24 pt-20 pb-10 sm:pt-24 sm:pb-12">
       <div className="section-wrap max-w-3xl">
         <SectionHeader
           kicker={dict.faq.kicker}

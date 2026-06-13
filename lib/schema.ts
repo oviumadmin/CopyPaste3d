@@ -16,7 +16,7 @@ export function buildJsonLd(dict: Dictionary, locale: Locale) {
     description: dict.meta.description,
     url,
     email: SITE.email,
-    telephone: SITE.phone,
+    ...(SITE.phone ? { telephone: SITE.phone } : {}),
     image: `${SITE.url}/${locale}/opengraph-image`,
     address: {
       "@type": "PostalAddress",

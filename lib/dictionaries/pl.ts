@@ -378,6 +378,7 @@ export const pl = {
         "Kościan i Wielkopolska — skanowanie z dojazdem, wydruki wysyłamy w całą Polskę",
       hoursTitle: "Godziny pracy",
       hours: ["pn–pt 9:00–18:00", "sob 10:00–14:00"],
+      mapTitle: "Mapa — Kościan i okolice",
     },
   },
 

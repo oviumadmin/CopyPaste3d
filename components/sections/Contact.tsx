@@ -11,6 +11,9 @@ import { Reveal } from "../ui/Reveal";
 
 type SubmitState = "idle" | "submitting" | "success" | "demo" | "error";
 
+/** OSM embed bbox (minLon,minLat,maxLon,maxLat) framing Kościan. */
+const MAP_BBOX = "16.555,52.060,16.735,52.115";
+
 export function Contact({
   dict,
   locale,
@@ -126,7 +129,7 @@ export function Contact({
   }
 
   return (
-    <section id="contact" className="scroll-mt-24 py-20 sm:py-24">
+    <section id="contact" className="scroll-mt-24 pt-12 pb-20 sm:pt-14 sm:pb-24">
       <div className="section-wrap">
         <SectionHeader kicker={t.kicker} title={t.title} lead={t.lead} />
 
@@ -278,9 +281,16 @@ export function Contact({
                     {SITE.email}
                   </a>
                 </InfoRow>
-                <InfoRow icon={<Phone className="h-5 w-5" />} label={f.phone}>
-                  <span className="text-ink">{SITE.phone}</span>
-                </InfoRow>
+                {SITE.phone && (
+                  <InfoRow icon={<Phone className="h-5 w-5" />} label={f.phone}>
+                    <a
+                      href={`tel:${SITE.phone.replace(/\s/g, "")}`}
+                      className="text-ink hover:text-teal"
+                    >
+                      {SITE.phone}
+                    </a>
+                  </InfoRow>
+                )}
                 <InfoRow
                   icon={<MapPin className="h-5 w-5" />}
                   label={t.info.serviceArea}
@@ -300,12 +310,16 @@ export function Contact({
                   </span>
                 </InfoRow>
               </ul>
-              {/* Static map placeholder — swap for an embed or static image */}
-              <div className="blueprint-grid mt-auto flex aspect-[16/10] items-center justify-center rounded-2xl border border-line bg-surface-2">
-                <span className="inline-flex items-center gap-2 font-mono text-xs text-muted">
-                  <MapPin className="h-4 w-4 text-teal" />
-                  Kościan, Wielkopolska
-                </span>
+              {/* Map — OpenStreetMap embed centred on the service area
+                  (no API key needed). Lazy-loaded; muted to suit dark mode. */}
+              <div className="mt-auto aspect-[16/10] overflow-hidden rounded-2xl border border-line bg-surface-2">
+                <iframe
+                  title={t.info.mapTitle}
+                  src={`https://www.openstreetmap.org/export/embed.html?bbox=${MAP_BBOX}&layer=mapnik&marker=${SITE.address.geo.lat}%2C${SITE.address.geo.lng}`}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="h-full w-full border-0 grayscale-[0.2] contrast-[0.95] dark:opacity-90 dark:invert-[0.92] dark:hue-rotate-180"
+                />
               </div>
             </div>
           </Reveal>

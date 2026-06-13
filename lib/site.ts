@@ -8,7 +8,7 @@ export const SITE = {
   /** Used for canonical URLs, sitemap, OG and JSON-LD. Override via env. */
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://copypaste3d.pl", // <<DOMAIN>>
   email: "hello@copypaste3d.com", // <<EMAIL>>
-  phone: "<<PHONE>>", // e.g. +48 600 000 000
+  phone: "" as string, // e.g. "+48 600 000 000" — leave empty to hide the phone row
 
   /**
    * Service-area business: the street address can stay hidden.
@@ -25,8 +25,9 @@ export const SITE = {
     geo: { lat: 52.0866, lng: 16.6452 },
   },
 
-  nip: "<<NIP>>",
-  regon: "<<REGON>>",
+  // Leave empty to hide the NIP/REGON legal line until you have the numbers.
+  nip: "" as string,
+  regon: "" as string,
 
   social: {
     tiktok: "https://www.tiktok.com/@copypaste3d",

@@ -114,9 +114,13 @@ export function Footer({ dict }: { dict: Dictionary }) {
       <div className="border-t border-mist/10">
         <div className="section-wrap flex flex-col items-center justify-between gap-2 py-6 text-center sm:flex-row sm:text-left">
           <p className="font-mono text-[11px] text-mist/50">
-            {dict.footer.legalLine
-              .replace("{nip}", SITE.nip)
-              .replace("{regon}", SITE.regon)}
+            {[
+              "Copy Paste 3D",
+              SITE.nip && `NIP ${SITE.nip}`,
+              SITE.regon && `REGON ${SITE.regon}`,
+            ]
+              .filter(Boolean)
+              .join(" · ")}
           </p>
           <p className="font-mono text-[11px] text-mist/50">
             {dict.footer.copyright.replace("{year}", year)}

@@ -380,6 +380,7 @@ export const en: Dictionary = {
         "Kościan & Wielkopolska for on-site scanning; prints ship across Poland and the EU",
       hoursTitle: "Opening hours",
       hours: ["Mon–Fri 9:00–18:00", "Sat 10:00–14:00"],
+      mapTitle: "Map — Kościan and surrounding area",
     },
   },
 
