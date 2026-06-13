@@ -1,0 +1,24 @@
+# dependencies
+/node_modules
+
+# next.js
+/.next/
+/out/
+next-env.d.ts
+
+# misc
+.DS_Store
+*.pem
+.vscode/
+
+# env
+.env
+.env*.local
+
+# vercel / netlify
+.vercel
+.netlify
+
+# reference material (not part of the site)
+/logoidea1_files/
+logoidea1.html

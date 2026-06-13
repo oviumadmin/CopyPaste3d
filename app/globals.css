@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------------------------------------------------------------------------
+   Design tokens — semantic, theme-aware. Brand constants live in
+   tailwind.config.ts (teal / navy / mist / paper / ember).
+--------------------------------------------------------------------------- */
+:root {
+  --bg: #f7fafa; /* paper */
+  --surface: #ffffff;
+  --surface-2: #eef5f4;
+  --ink: #0b1f33; /* navy */
+  --muted: #4a647d;
+  --line: rgba(11, 31, 51, 0.12);
+  --glass: rgba(247, 250, 250, 0.78);
+  --grid-line: rgba(11, 31, 51, 0.05);
+}
+
+.dark {
+  --bg: #0b1f33; /* navy */
+  --surface: #12273d; /* navy-2 */
+  --surface-2: #1a3450;
+  --ink: #e8f4f3; /* mist */
+  --muted: #93adc0;
+  --line: rgba(232, 244, 243, 0.12);
+  --glass: rgba(11, 31, 51, 0.7);
+  --grid-line: rgba(232, 244, 243, 0.045);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6.5rem; /* announcement bar + sticky nav */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+  font-feature-settings: "ss01";
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: #14b8b1;
+  color: #0b1f33;
+}
+
+/* Visible keyboard focus everywhere */
+:focus-visible {
+  outline: 2px solid #14b8b1;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ---------------------------------------------------------------------------
+   Reusable patterns
+--------------------------------------------------------------------------- */
+@layer components {
+  /* Blueprint grid backdrop (hero + section accents) */
+  .blueprint-grid {
+    background-image: linear-gradient(var(--grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: 44px 44px;
+  }
+
+  /* Frosted-glass bar */
+  .glass {
+    background: var(--glass);
+    backdrop-filter: blur(14px) saturate(1.4);
+    -webkit-backdrop-filter: blur(14px) saturate(1.4);
+  }
+
+  /* Pill buttons */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-body text-sm font-semibold transition-all duration-200;
+  }
+  .btn-primary {
+    @apply btn bg-ember text-white shadow-[0_8px_24px_-8px_rgba(255,122,26,0.55)] hover:bg-ember-deep hover:shadow-[0_10px_28px_-8px_rgba(255,122,26,0.7)] active:translate-y-px;
+  }
+  .btn-secondary {
+    @apply btn border border-line bg-transparent text-ink hover:border-teal hover:text-teal;
+  }
+  .btn-teal {
+    @apply btn bg-teal text-navy hover:bg-teal-bright active:translate-y-px;
+  }
+
+  /* Section scaffold */
+  .section-wrap {
+    @apply mx-auto w-full max-w-wrap px-5 sm:px-8;
+  }
+  .kicker {
+    @apply font-mono text-xs uppercase tracking-[0.22em] text-teal;
+  }
+  .section-title {
+    @apply mt-3 font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl;
+  }
+  .section-lead {
+    @apply mt-4 max-w-2xl text-base leading-relaxed text-muted;
+  }
+
+  /* Card */
+  .card {
+    @apply rounded-2xl border border-line bg-surface transition-all duration-300;
+  }
+  .card-hover {
+    @apply hover:-translate-y-1 hover:border-teal/50 hover:shadow-[0_16px_40px_-16px_rgba(20,184,177,0.25)];
+  }
+
+  /* Mono "machine readout" label */
+  .readout {
+    @apply font-mono text-xs tracking-wide text-muted;
+  }
+
+  /* Form controls */
+  .cp-input {
+    @apply h-11 w-full rounded-xl border border-line bg-bg px-4 text-sm text-ink placeholder:text-muted transition-colors focus:border-teal;
+  }
+  textarea.cp-input {
+    @apply h-auto py-3;
+  }
+}
+
+/* Layer-build reveal for portfolio cards (the signature motif, reused once).
+   Animated via Framer Motion clip-path inset; this is just the scanline tint. */
+.print-in-overlay {
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(20, 184, 177, 0) 78%,
+    rgba(20, 184, 177, 0.35) 99%,
+    rgba(43, 212, 204, 0.9) 100%
+  );
+}

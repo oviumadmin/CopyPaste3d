@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(New-Item -ItemType Directory -Force \"$env:USERPROFILE\\\\.claude\\\\skills\" | Out-Null; Copy-Item -Recurse -Force \"C:\\\\Users\\\\robic\\\\Desktop\\\\Claude resources\\\\scroll-cinematic\" \"$env:USERPROFILE\\\\.claude\\\\skills\\\\scroll-cinematic\"; Get-ChildItem -Recurse \"$env:USERPROFILE\\\\.claude\\\\skills\\\\scroll-cinematic\" | Select-Object FullName)",
+      "PowerShell($paths = @\\(\"$env:ProgramFiles\\\\nodejs\\\\node.exe\", \"$env:LOCALAPPDATA\\\\Programs\\\\nodejs\\\\node.exe\", \"$env:APPDATA\\\\nvm\", \"$env:LOCALAPPDATA\\\\nvs\", \"$env:USERPROFILE\\\\scoop\\\\apps\\\\nodejs\", \"$env:ProgramFiles\\\\nodejs\"\\); foreach \\($p in $paths\\) { if \\(Test-Path $p\\) { Write-Output \"FOUND: $p\" } }; Get-Command winget -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Source)",
+      "Bash(which node *)",
+      "PowerShell(winget install OpenJS.NodeJS.LTS --accept-source-agreements --accept-package-agreements --silent)",
+      "PowerShell($env:Path = [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"User\"\\); node --version; npm --version)"
+    ]
+  }
+}

@@ -1,0 +1,403 @@
+import type { Dictionary } from "./pl";
+
+/**
+ * English dictionary — secondary locale. Must satisfy the Dictionary type
+ * derived from pl.ts, so missing keys fail the build.
+ */
+
+export const en: Dictionary = {
+  meta: {
+    title: "Copy Paste 3D — 3D Scanning & Printing | Kościan, Poland",
+    description:
+      "We scan your object and print a faithful copy — or a version modified exactly how you need it. Multi-color FDM printing, portable on-site 3D scanning, reverse engineering and prototypes. Based in Kościan, Poland; serving the region and EU clients.",
+    ogAlt: "Copy Paste 3D — scan and 3D print in Kościan, Poland",
+  },
+
+  announcement: {
+    messages: [
+      "Standard turnaround: 2–5 business days",
+      "On-site 3D scanning — we come to you (Wielkopolska region)",
+      "AMS multi-color printing — up to 4 colors in one print",
+    ],
+  },
+
+  nav: {
+    services: "Services",
+    portfolio: "Portfolio",
+    materials: "Materials",
+    estimator: "Quote",
+    faq: "FAQ",
+    contact: "Contact",
+    getQuote: "Get a quote",
+    openMenu: "Open menu",
+    closeMenu: "Close menu",
+    switchToLight: "Switch to light theme",
+    switchToDark: "Switch to dark theme",
+    languageLabel: "Site language",
+    skipToContent: "Skip to content",
+  },
+
+  hero: {
+    kicker: "Scan · Model · 3D Print",
+    title: "Your object, reproduced in 3D",
+    lead: "We scan a physical object, rebuild it digitally and print its copy — faithful, or modified exactly the way you need. From a single figurine to a batch of parts.",
+    ctaPrimary: "Get a quote",
+    ctaSecondary: "See our work",
+    scanLabel: "scan",
+    printLabel: "print",
+    animationAlt:
+      "Animation: an object is swept by a scanning beam while its printed copy builds up layer by layer beside it",
+  },
+
+  differentiators: {
+    kicker: "What sets us apart",
+    items: [
+      {
+        title: "Multi-color printing in a single run",
+        body: "Our AMS 2 Pro system prints up to 4 colors in one job — no hand-painting, no gluing. Logos, markings and details come straight off the printer.",
+      },
+      {
+        title: "On-site scanning — we come to you",
+        body: "We bring a portable structured-light scanner to your workshop, factory or home. Objects up to ~1 m get digitized without ever leaving your door.",
+      },
+    ],
+  },
+
+  services: {
+    kicker: "Services",
+    title: "From scan to finished part",
+    lead: "Six services, one workshop. Pick what you need — or describe the problem and we'll map the route.",
+    imagePlaceholder: "Image slot",
+    items: [
+      {
+        title: "Multi-color FDM printing",
+        body: "Functional parts and display pieces in PLA, PETG, TPU and ABS — up to 4 colors in a single run thanks to the AMS 2 Pro.",
+        example: "Example: tool marker with high-contrast labeling",
+      },
+      {
+        title: "3D scanning",
+        body: "A structured-light scanner digitizes objects up to ~1 m with accuracy down to 0.02 mm. At our workshop or on-site at yours.",
+        example: "Example: casting scanned before reconstruction",
+      },
+      {
+        title: "Reverse engineering & CAD",
+        body: "We turn scans into proper CAD models: dimensioned, editable, production-ready. We recreate parts nobody manufactures anymore.",
+        example: "Example: replacement for a cracked machine handle",
+      },
+      {
+        title: "Rapid prototyping",
+        body: "Iterations in days, not weeks. Concept print in the morning, revisions in the afternoon, next version the following day.",
+        example: "Example: three iterations of an electronics enclosure",
+      },
+      {
+        title: "Custom figurines & personalized gifts",
+        body: "A scan of a person, a pet or a favorite object — turned into a full-color miniature. A gift you can't buy in any store.",
+        example: "Example: couple figurine for a wedding cake",
+      },
+      {
+        title: "CAD consulting & model prep",
+        body: "Got a model that won't print? We repair meshes, dial in tolerances and orientation, and advise on materials.",
+        example: "Example: STL mesh repair on a downloaded model",
+      },
+    ],
+  },
+
+  process: {
+    kicker: "How we work",
+    title: "Four steps from original to copy",
+    steps: [
+      {
+        name: "Scan",
+        body: "We scan your object with structured light — at our place or yours. The result is a dense point cloud that captures the geometry faithfully.",
+      },
+      {
+        name: "Model",
+        body: "We clean up the scan and build a model from it: a faithful copy, or a version with changes — rescaled, with a crack repaired, with a mount added.",
+      },
+      {
+        name: "Print",
+        body: "We print in FDM, in several colors at once when needed. Material, infill and orientation are chosen for the part's job.",
+      },
+      {
+        name: "Finish",
+        body: "We remove supports, smooth surfaces and check dimensions. You collect a part that's ready to use — in person or by courier.",
+      },
+    ],
+  },
+
+  portfolio: {
+    kicker: "Portfolio",
+    title: "See what we've copied so far",
+    lead: "Filter by category. Some pieces open in a 3D viewer, others as an original-vs-print comparison.",
+    filterAll: "All",
+    categories: {
+      figurines: "Figurines",
+      parts: "Parts",
+      prototypes: "Prototypes",
+      repairs: "Repairs",
+      scans: "Scans",
+    },
+    open3d: "View in 3D",
+    openCompare: "Compare: original / print",
+    photoPlaceholder: "Project photo slot",
+    viewerHint: "Drag to rotate · scroll to zoom",
+    compareHint: "Drag the slider to compare",
+    compareBefore: "Original",
+    compareAfter: "Print",
+    close: "Close",
+    items: [
+      {
+        title: "Couple figurine — wedding gift",
+        blurb: "Scan of two people, 15 cm multi-color print.",
+      },
+      {
+        title: "Lever handle — packaging machine",
+        blurb: "Reverse-engineered from a cracked part, PETG, batch of 8.",
+      },
+      {
+        title: "Controller housing — prototype",
+        blurb: "Three iterations in a week, screwless snap-fit design.",
+      },
+      {
+        title: "Grinder knob — appliance repair",
+        blurb: "Scanned the surviving unit, copied in ABS.",
+      },
+      {
+        title: "Garden sculpture scan",
+        blurb: "80 cm object scanned at the client's home, archived as a model.",
+      },
+      {
+        title: "Multi-color desk logo",
+        blurb: "Four colors in a single print, zero painting.",
+      },
+    ],
+  },
+
+  materials: {
+    kicker: "Materials & colors",
+    title: "We print color, we don't paint it",
+    lead: "The AMS 2 Pro feeds up to 4 filaments into a single print. Pick a combination below and see it on the model — that's exactly how it works on the printer.",
+    visualizerTitle: "AMS color visualizer",
+    visualizerHint: "Click a slot, then a color from the palette. The model rotates — grab and drag it.",
+    slotLabel: "Slot",
+    swatchesTitle: "Filament palette",
+    swatchesNote: "Our color stock keeps growing. Need a specific shade? We'll source it for your project.",
+    materialsTitle: "Materials we print",
+    materialNotes: [
+      { name: "PLA", note: "all-rounder, best detail, models and figurines" },
+      { name: "PETG", note: "tough, moisture-resistant, functional parts" },
+      { name: "TPU", note: "rubber-like flex, gaskets and dampers" },
+      { name: "ABS", note: "heat-resistant, technical parts" },
+    ],
+  },
+
+  hardware: {
+    kicker: "Hardware",
+    title: "The machines we run",
+    lead: "Specific, modern equipment — no promises the workshop can't back up.",
+    items: [
+      {
+        name: "Bambu Lab P1S",
+        role: "FDM printer",
+        specs: [
+          "Build volume 256 × 256 × 256 mm",
+          "Speeds up to 500 mm/s",
+          "Enclosed chamber — reliable ABS",
+        ],
+      },
+      {
+        name: "AMS 2 Pro",
+        role: "Multi-material system",
+        specs: [
+          "4 spools, automatic switching",
+          "Up to 4 colors in one print",
+          "Active filament drying",
+        ],
+      },
+      {
+        name: "Creality Otter",
+        role: "3D scanner",
+        specs: [
+          "Structured light, handheld",
+          "Accuracy down to 0.02 mm",
+          "Objects up to ~1 m — on-site too",
+        ],
+      },
+    ],
+    software: "Software: Fusion 360 · Meshmixer",
+  },
+
+  estimator: {
+    kicker: "Online quote",
+    title: "Upload a model, see the price range",
+    lead: "Your file is analyzed in your browser — it goes nowhere until you click “Send for an exact quote” yourself.",
+    dropTitle: "Drop your file here",
+    dropOr: "or",
+    browse: "browse your disk",
+    dropFormats: "STL · 3MF · OBJ · STEP — up to 50 MB",
+    parsing: "Analyzing model…",
+    parseError:
+      "Couldn't read this file. Check that it's a valid STL, 3MF or OBJ — or send it through the form and we'll measure it manually.",
+    stepNotice:
+      "STEP files are quoted manually — the browser can't compute their volume. Click “Send for an exact quote” and we'll reply with a firm price.",
+    fileTooLarge: "File is over 50 MB. Send it via the contact form instead.",
+    unitsNote: "We assume the model is in millimetres.",
+    dimensions: "Dimensions",
+    volume: "Volume",
+    triangles: "Triangles",
+    controls: {
+      material: "Material",
+      colors: "Number of colors",
+      colorsHint: "Multi-color uses our AMS system — it's our specialty.",
+      infill: "Infill",
+      quantity: "Quantity",
+    },
+    result: {
+      estimateLabel: "Estimated price",
+      timeLabel: "Estimated print time",
+      perPiece: "per piece",
+      disclaimer:
+        "This is an estimate, not a binding offer. The final price depends on supports, orientation and finishing — we confirm it before printing starts.",
+      send: "Send for an exact quote",
+      sent: "File attached to the form below — finish sending it there.",
+    },
+    emptyState:
+      "Upload a model to see a 3D preview, dimensions and a price range here.",
+    removeFile: "Remove file",
+  },
+
+  testimonials: {
+    kicker: "Reviews",
+    title: "What clients say",
+    note: "",
+    googleCta: "See our Google reviews",
+    /** SAMPLE quotes — replace with real Google reviews before launch. */
+    items: [
+      {
+        quote:
+          "A knob snapped on a machine nobody services anymore. Two days later I had three spares — they fit better than the original.",
+        author: "Workshop client, Kościan",
+      },
+      {
+        quote:
+          "The figurine made from our scan came out incredible. Wedding guests refused to believe it was printed.",
+        author: "Private client, Leszno",
+      },
+      {
+        quote:
+          "They came to the plant with the scanner and digitized our tooling on the spot. A week later we had the CAD models.",
+        author: "Manufacturing company, Poznań",
+      },
+    ],
+  },
+
+  faq: {
+    kicker: "FAQ",
+    title: "Common questions",
+    items: [
+      {
+        q: "How much does 3D printing cost?",
+        a: "The simplest prints start at 30 PLN. Price depends on material volume, color count and print time. The fastest way to check is our online quote — upload a file and see the range instantly.",
+      },
+      {
+        q: "I don't have a 3D file — just a physical object. Now what?",
+        a: "That's our specialty. We scan the object with a structured-light scanner and turn the scan into a printable model. Bring the object to us, or book an on-site scan.",
+      },
+      {
+        q: "How does on-site scanning work?",
+        a: "We come to your home, workshop or company with a portable scanner — we cover Kościan and the surrounding area, and the whole Wielkopolska region by appointment. We scan objects up to about 1 metre. Book a date through the contact form.",
+      },
+      {
+        q: "Which file formats do you accept?",
+        a: "STL, 3MF, OBJ and STEP. If all you have is photos, a sketch or the object itself — we can work with that too; that's what the scanner and CAD are for.",
+      },
+      {
+        q: "How long does an order take?",
+        a: "Typically 2–5 business days from quote approval. Simple prints are often ready the next day. Projects involving scanning and modeling are scheduled individually.",
+      },
+      {
+        q: "Do you print in resin or metal?",
+        a: "No — we work in FDM (PLA, PETG, TPU, ABS) and we're upfront about it. What we do offer in FDM is something almost nobody nearby has: up to 4 colors in a single run.",
+      },
+      {
+        q: "Will the print be strong enough?",
+        a: "Yes, if the material matches the job: PETG for mechanical parts, ABS for heat exposure, TPU where flexibility is needed. We'll advise during the quote.",
+      },
+      {
+        q: "Can I order just one piece?",
+        a: "Absolutely. 3D printing needs no molds and no minimum runs — one figurine or one replacement part is a normal order. Per-piece price drops on larger batches.",
+      },
+    ],
+  },
+
+  contact: {
+    kicker: "Contact",
+    title: "Get a quote or book a scan",
+    lead: "We reply on business days, usually the same day. Describe what you want printed or scanned — attach a file or a photo if you have one.",
+    form: {
+      name: "Full name",
+      email: "Email",
+      phone: "Phone (optional)",
+      topic: "Topic",
+      topics: {
+        print: "3D printing quote",
+        scan: "Scanning / reverse engineering",
+        onsite: "On-site scanning — booking",
+        other: "Something else",
+      },
+      date: "Preferred date",
+      area: "Scanning location / address",
+      areaPlaceholder: "e.g. Kościan, …",
+      message: "Message",
+      messagePlaceholder:
+        "Describe the object or project: dimensions, material, quantity, deadline…",
+      file: "Attachment (3D model or photo)",
+      fileFormats: "STL, 3MF, OBJ, STEP, JPG, PNG — up to 50 MB",
+      fileAttached: "Attached file",
+      consent:
+        "I consent to the processing of my data for the purpose of answering this inquiry (GDPR).",
+      submit: "Send inquiry",
+      submitting: "Sending…",
+      success:
+        "Thank you! Your inquiry arrived — we'll get back to you within one business day.",
+      demoNotice:
+        "Demo mode: the form backend (Formspree) isn't configured yet. The message was not sent.",
+      error:
+        "The form couldn't be sent. Try again, or email us directly at",
+      required: "Required field",
+      invalidEmail: "Enter a valid email address",
+      quoteParams: "Quote parameters",
+    },
+    info: {
+      title: "Contact details",
+      serviceArea: "Service area",
+      serviceAreaValue:
+        "Kościan & Wielkopolska for on-site scanning; prints ship across Poland and the EU",
+      hoursTitle: "Opening hours",
+      hours: ["Mon–Fri 9:00–18:00", "Sat 10:00–14:00"],
+    },
+  },
+
+  footer: {
+    tagline: "We scan. We model. We print — in color.",
+    navTitle: "Navigation",
+    servicesTitle: "Services",
+    servicesLinks: [
+      "Multi-color FDM printing",
+      "On-site 3D scanning",
+      "Reverse engineering",
+      "Prototyping",
+      "Figurines & gifts",
+      "CAD consulting",
+    ],
+    newsletterTitle: "Workshop news",
+    newsletterLead: "New materials, projects and offers. Zero spam.",
+    newsletterPlaceholder: "Your email",
+    newsletterCta: "Subscribe",
+    newsletterSuccess: "Subscribed! Talk soon.",
+    paymentsTitle: "Payments",
+    legalLine: "Copy Paste 3D · NIP {nip} · REGON {regon}",
+    copyright: "© {year} Copy Paste 3D, Kościan, Poland. All rights reserved.",
+    socialLabel: "Find us",
+  },
+};
