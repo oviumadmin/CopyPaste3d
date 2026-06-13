@@ -22,3 +22,8 @@ next-env.d.ts
 # reference material (not part of the site)
 /logoidea1_files/
 logoidea1.html
+
+# generated screenshot artifacts (see scripts/shoot*.mjs)
+/shot-*.png
+/pl-*.png
+/en-*.png
