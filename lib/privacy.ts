@@ -1,11 +1,12 @@
 /**
  * Privacy policy content (bilingual). Rendered by app/[locale]/privacy.
  *
- * Bracketed [...] values are PLACEHOLDERS that depend on the registered
- * business and MUST be filled before the hard launch: legal name, business
- * name, street address, NIP, REGON, the e-mail provider and (if any) the
- * accounting office. Known facts are already filled in: contact e-mail/phone,
- * the contact-form backend (Formspree, US) and the host (Vercel, US).
+ * Controller: Robert Czegely, operating under the name CopyPaste3D (Borowo 77,
+ * 64-020 Czempiń). NOT a registered business yet — no NIP/REGON, so those lines
+ * are intentionally omitted rather than left blank. Processors: Zoho (e-mail),
+ * Formspree (US, form), Vercel (US, hosting). Revisit §1 (add NIP/REGON and the
+ * "działalność gospodarcza" wording) once the business is registered, and have
+ * a lawyer confirm before actively promoting the site.
  */
 
 import type { Locale } from "./i18n";
@@ -37,9 +38,8 @@ const pl: PrivacyDoc = {
       blocks: [
         {
           type: "p",
-          text: "Administratorem Twoich danych osobowych jest [imię i nazwisko], prowadzący jednoosobową działalność gospodarczą pod firmą [pełna nazwa firmy, np. „Copy Paste 3D [imię i nazwisko]”], z siedzibą w Kościanie, [adres].",
+          text: "Administratorem Twoich danych osobowych jest Robert Czegely, działający pod marką CopyPaste3D, z adresem: Borowo 77, 64-020 Czempiń.",
         },
-        { type: "p", text: "NIP: [NIP] · REGON: [REGON]" },
         {
           type: "p",
           text: "Kontakt: kontakt@copypaste3d.pl · tel. +48 734 984 760",
@@ -99,10 +99,9 @@ const pl: PrivacyDoc = {
         {
           type: "list",
           items: [
-            "dostawca poczty e-mail: [dostawca poczty e-mail];",
+            "dostawca poczty e-mail: Zoho;",
             "obsługa formularza kontaktowego: Formspree (USA);",
-            "hosting strony internetowej: Vercel (USA);",
-            "biuro rachunkowe / księgowość: [nazwa, jeśli dotyczy].",
+            "hosting strony internetowej: Vercel (USA).",
           ],
         },
       ],
@@ -184,9 +183,8 @@ const en: PrivacyDoc = {
       blocks: [
         {
           type: "p",
-          text: "The controller of your personal data is [full name], sole proprietor trading as [business name, e.g. “Copy Paste 3D [name]”], based in Kościan, Poland, [address].",
+          text: "The controller of your personal data is Robert Czegely, operating under the name CopyPaste3D, at Borowo 77, 64-020 Czempiń, Poland.",
         },
-        { type: "p", text: "Tax ID (NIP): [NIP] · REGON: [REGON]" },
         {
           type: "p",
           text: "Contact: kontakt@copypaste3d.pl · phone +48 734 984 760",
@@ -246,10 +244,9 @@ const en: PrivacyDoc = {
         {
           type: "list",
           items: [
-            "email provider: [email provider];",
+            "email provider: Zoho;",
             "contact-form provider: Formspree (USA);",
-            "website hosting: Vercel (USA);",
-            "accounting: [name, if applicable].",
+            "website hosting: Vercel (USA).",
           ],
         },
       ],

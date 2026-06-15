@@ -48,7 +48,8 @@ export const SITE = {
    * it validates and shows success, but nothing is sent.
    */
   formspreeEndpoint:
-    process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT ?? "<<FORMSPREE_ENDPOINT>>",
+    process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT ??
+    "https://formspree.io/f/meewnzpb",
 
   openingHours: [
     { days: "Mo-Fr", opens: "09:00", closes: "18:00" },
