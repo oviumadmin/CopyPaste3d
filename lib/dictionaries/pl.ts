@@ -126,7 +126,7 @@ export const pl = {
   portfolio: {
     kicker: "Realizacje",
     title: "Zobacz, co już skopiowaliśmy",
-    lead: "Filtruj według kategorii. Część realizacji obejrzysz w 3D albo porównasz oryginał z wydrukiem.",
+    lead: "Filtruj według kategorii. Realizacje oznaczone ikoną 3D obejrzysz w interaktywnym podglądzie i obrócisz samodzielnie.",
     filterAll: "Wszystkie",
     categories: {
       figurines: "Figurki",
@@ -157,16 +157,16 @@ export const pl = {
         blurb: "Trzy iteracje w tydzień, zatrzaski bez śrub.",
       },
       {
-        title: "Gałka maszynki — naprawa AGD",
-        blurb: "Skan ocalałego egzemplarza, kopia w ABS.",
+        title: "Indywidualny uchwyt — modelowanie CAD",
+        blurb: "Zaprojektowany od zera w Fusion 360, gotowy do wydruku z idealnym pasowaniem.",
       },
       {
-        title: "Skan rzeźby ogrodowej",
-        blurb: "Obiekt 80 cm zeskanowany u klienta, model do archiwizacji.",
+        title: "Skan 3D u klienta — część maszyny",
+        blurb: "Metalowy odlew zeskanowany na miejscu u klienta, zarchiwizowany jako szczelny model.",
       },
       {
-        title: "Wielokolorowe logo na biurko",
-        blurb: "Cztery kolory w jednym wydruku, bez malowania.",
+        title: "Dwa kolory, zero malowania",
+        blurb: "Turkus i pomarańcz w jednym wydruku — kolor schodzi z drukarki, nie z lakierni.",
       },
     ],
   },
@@ -403,6 +403,10 @@ export const pl = {
     legalLine: "Copy Paste 3D · NIP {nip} · REGON {regon}",
     copyright: "© {year} Copy Paste 3D, Kościan. Wszystkie prawa zastrzeżone.",
     socialLabel: "Znajdź nas",
+    privacy: "Polityka prywatności",
+  },
+  privacy: {
+    backHome: "Powrót na stronę główną",
   },
 };
 

@@ -128,7 +128,7 @@ export const en: Dictionary = {
   portfolio: {
     kicker: "Portfolio",
     title: "See what we've copied so far",
-    lead: "Filter by category. Some pieces open in a 3D viewer, others as an original-vs-print comparison.",
+    lead: "Filter by category. Pieces marked with the 3D icon open in an interactive viewer you can rotate yourself.",
     filterAll: "All",
     categories: {
       figurines: "Figurines",
@@ -159,16 +159,16 @@ export const en: Dictionary = {
         blurb: "Three iterations in a week, screwless snap-fit design.",
       },
       {
-        title: "Grinder knob — appliance repair",
-        blurb: "Scanned the surviving unit, copied in ABS.",
+        title: "Custom clamp — CAD modeling",
+        blurb: "Designed from scratch in Fusion 360, ready for a perfect-fit print.",
       },
       {
-        title: "Garden sculpture scan",
-        blurb: "80 cm object scanned at the client's home, archived as a model.",
+        title: "On-site 3D scan — machine part",
+        blurb: "A metal casting digitized at the client's site, archived as a watertight model.",
       },
       {
-        title: "Multi-color desk logo",
-        blurb: "Four colors in a single print, zero painting.",
+        title: "Two-color part, zero painting",
+        blurb: "Teal and orange in a single print — the color comes off the printer, not a paint booth.",
       },
     ],
   },
@@ -405,5 +405,9 @@ export const en: Dictionary = {
     legalLine: "Copy Paste 3D · NIP {nip} · REGON {regon}",
     copyright: "© {year} Copy Paste 3D, Kościan, Poland. All rights reserved.",
     socialLabel: "Find us",
+    privacy: "Privacy policy",
+  },
+  privacy: {
+    backHome: "Back to homepage",
   },
 };

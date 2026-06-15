@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Instagram, Youtube } from "lucide-react";
 import type { Dictionary } from "@/lib/i18n";
 import { SITE, isFormBackendConfigured } from "@/lib/site";
@@ -18,6 +20,8 @@ const NAV_IDS = [
 export function Footer({ dict }: { dict: Dictionary }) {
   const year = new Date().getFullYear().toString();
   const hasSocial = Object.values(SITE.social).some(Boolean);
+  const pathname = usePathname();
+  const locale = pathname.split("/")[1] === "en" ? "en" : "pl";
 
   return (
     <footer className="border-t border-line bg-navy text-mist">
@@ -133,9 +137,17 @@ export function Footer({ dict }: { dict: Dictionary }) {
               .filter(Boolean)
               .join(" · ")}
           </p>
-          <p className="font-mono text-[11px] text-mist/50">
-            {dict.footer.copyright.replace("{year}", year)}
-          </p>
+          <div className="flex items-center gap-4">
+            <Link
+              href={`/${locale}/privacy`}
+              className="font-mono text-[11px] text-mist/50 transition-colors hover:text-teal"
+            >
+              {dict.footer.privacy}
+            </Link>
+            <p className="font-mono text-[11px] text-mist/50">
+              {dict.footer.copyright.replace("{year}", year)}
+            </p>
+          </div>
         </div>
       </div>
     </footer>

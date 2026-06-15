@@ -8,7 +8,7 @@ export const SITE = {
   /** Used for canonical URLs, sitemap, OG and JSON-LD. Override via env. */
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://copypaste3d.pl",
   email: "kontakt@copypaste3d.pl",
-  phone: "" as string, // e.g. "+48 600 000 000" — leave empty to hide the phone row
+  phone: "+48 734 984 760" as string, // leave empty to hide the phone row
 
   /**
    * Service-area business: the street address can stay hidden.
