@@ -4,7 +4,7 @@
  * Controller: Robert Czegely, operating under the name CopyPaste3D (Borowo 77,
  * 64-020 Czempiń). NOT a registered business yet — no NIP/REGON, so those lines
  * are intentionally omitted rather than left blank. Processors: Zoho (e-mail),
- * Formspree (US, form), Vercel (US, hosting). Revisit §1 (add NIP/REGON and the
+ * Formspree (US, form), Netlify (US, hosting). Revisit §1 (add NIP/REGON and the
  * "działalność gospodarcza" wording) once the business is registered, and have
  * a lawyer confirm before actively promoting the site.
  */
@@ -101,7 +101,7 @@ const pl: PrivacyDoc = {
           items: [
             "dostawca poczty e-mail: Zoho;",
             "obsługa formularza kontaktowego: Formspree (USA);",
-            "hosting strony internetowej: Vercel (USA).",
+            "hosting strony internetowej: Netlify (USA).",
           ],
         },
       ],
@@ -246,7 +246,7 @@ const en: PrivacyDoc = {
           items: [
             "email provider: Zoho;",
             "contact-form provider: Formspree (USA);",
-            "website hosting: Vercel (USA).",
+            "website hosting: Netlify (USA).",
           ],
         },
       ],
