@@ -17,6 +17,7 @@ const NAV_IDS = [
 
 export function Footer({ dict }: { dict: Dictionary }) {
   const year = new Date().getFullYear().toString();
+  const hasSocial = Object.values(SITE.social).some(Boolean);
 
   return (
     <footer className="border-t border-line bg-navy text-mist">
@@ -29,25 +30,35 @@ export function Footer({ dict }: { dict: Dictionary }) {
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-mist/70">
             {dict.footer.tagline}
           </p>
-          <div className="mt-6">
-            <p className="font-mono text-xs uppercase tracking-[0.2em] text-mist/50">
-              {dict.footer.socialLabel}
-            </p>
-            <div className="mt-3 flex gap-3">
-              <SocialLink href={SITE.social.tiktok} label="TikTok">
-                <TikTokIcon />
-              </SocialLink>
-              <SocialLink href={SITE.social.instagram} label="Instagram">
-                <Instagram className="h-4 w-4" />
-              </SocialLink>
-              <SocialLink href={SITE.social.youtube} label="YouTube">
-                <Youtube className="h-4 w-4" />
-              </SocialLink>
-              <SocialLink href={SITE.social.x} label="X (Twitter)">
-                <XIcon />
-              </SocialLink>
+          {hasSocial && (
+            <div className="mt-6">
+              <p className="font-mono text-xs uppercase tracking-[0.2em] text-mist/50">
+                {dict.footer.socialLabel}
+              </p>
+              <div className="mt-3 flex gap-3">
+                {SITE.social.tiktok && (
+                  <SocialLink href={SITE.social.tiktok} label="TikTok">
+                    <TikTokIcon />
+                  </SocialLink>
+                )}
+                {SITE.social.instagram && (
+                  <SocialLink href={SITE.social.instagram} label="Instagram">
+                    <Instagram className="h-4 w-4" />
+                  </SocialLink>
+                )}
+                {SITE.social.youtube && (
+                  <SocialLink href={SITE.social.youtube} label="YouTube">
+                    <Youtube className="h-4 w-4" />
+                  </SocialLink>
+                )}
+                {SITE.social.x && (
+                  <SocialLink href={SITE.social.x} label="X (Twitter)">
+                    <XIcon />
+                  </SocialLink>
+                )}
+              </div>
             </div>
-          </div>
+          )}
         </div>
 
         {/* Navigation */}

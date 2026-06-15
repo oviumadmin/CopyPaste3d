@@ -44,7 +44,10 @@ export function buildJsonLd(dict: Dictionary, locale: Locale) {
       opens: h.opens,
       closes: h.closes,
     })),
-    sameAs: Object.values(SITE.social),
+    ...(() => {
+      const profiles = Object.values(SITE.social).filter(Boolean);
+      return profiles.length ? { sameAs: profiles } : {};
+    })(),
     priceRange: "30 PLN+",
   };
 

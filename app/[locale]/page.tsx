@@ -12,7 +12,6 @@ import { Portfolio } from "@/components/sections/Portfolio";
 import { Materials } from "@/components/sections/Materials";
 import { Capabilities } from "@/components/sections/Capabilities";
 import { Estimator } from "@/components/sections/Estimator";
-import { Testimonials } from "@/components/sections/Testimonials";
 import { Faq } from "@/components/sections/Faq";
 import { Contact } from "@/components/sections/Contact";
 
@@ -49,7 +48,6 @@ export default async function HomePage({
         <Materials dict={dict} locale={locale} />
         <Capabilities dict={dict} />
         <Estimator dict={dict} locale={locale} />
-        <Testimonials dict={dict} />
         <Faq dict={dict} />
         <Contact dict={dict} locale={locale} />
       </main>

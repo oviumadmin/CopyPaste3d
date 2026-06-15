@@ -6,8 +6,8 @@
 export const SITE = {
   name: "Copy Paste 3D",
   /** Used for canonical URLs, sitemap, OG and JSON-LD. Override via env. */
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://copypaste3d.pl", // <<DOMAIN>>
-  email: "hello@copypaste3d.com", // <<EMAIL>>
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://copypaste3d.pl",
+  email: "kontakt@copypaste3d.pl",
   phone: "" as string, // e.g. "+48 600 000 000" — leave empty to hide the phone row
 
   /**
@@ -29,11 +29,16 @@ export const SITE = {
   nip: "" as string,
   regon: "" as string,
 
+  /**
+   * Social profiles. No accounts exist yet — leave empty to hide the social
+   * row and omit them from structured data. Add the full profile URL here as
+   * each account goes live and it appears automatically.
+   */
   social: {
-    tiktok: "https://www.tiktok.com/@copypaste3d",
-    instagram: "https://www.instagram.com/copypaste3d", // <<verify handle>>
-    youtube: "https://www.youtube.com/@copypaste3d", // <<verify handle>>
-    x: "https://x.com/copypaste3d", // <<verify handle>>
+    tiktok: "",
+    instagram: "",
+    youtube: "",
+    x: "",
   },
 
   /**
