@@ -1,7 +1,7 @@
 "use client";
 
 import { useSyncExternalStore } from "react";
-import type { MaterialId } from "./pricing";
+import type { Currency, MaterialId } from "./pricing";
 
 /**
  * Tiny client-side store that hands the estimator's file + parameters
@@ -18,6 +18,7 @@ export interface QuoteHandoff {
     volumeCm3: number | null;
     priceLow: number | null;
     priceHigh: number | null;
+    currency: Currency;
   };
 }
 

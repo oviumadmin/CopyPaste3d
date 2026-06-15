@@ -256,6 +256,7 @@ export const en: Dictionary = {
       colorsHint: "Multi-color in a single run — it's our specialty.",
       infill: "Infill",
       quantity: "Quantity",
+      currency: "Currency",
     },
     result: {
       estimateLabel: "Estimated price",

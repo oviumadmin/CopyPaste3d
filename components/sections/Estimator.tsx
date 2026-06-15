@@ -14,6 +14,7 @@ import {
   estimateQuote,
   formatPrice,
   formatHours,
+  type Currency,
   type Estimate,
   type MaterialId,
 } from "@/lib/pricing";
@@ -62,6 +63,10 @@ export function Estimator({
   const [colors, setColors] = useState(1);
   const [infill, setInfill] = useState(20);
   const [quantity, setQuantity] = useState(1);
+  // Polish visitors default to PLN; others to EUR.
+  const [currency, setCurrency] = useState<Currency>(
+    locale === "pl" ? "PLN" : "EUR"
+  );
 
   const handleFile = useCallback(
     async (file: File) => {
@@ -133,6 +138,7 @@ export function Estimator({
         volumeCm3: stats?.volumeCm3 ?? null,
         priceLow: estimate?.priceLow ?? null,
         priceHigh: estimate?.priceHigh ?? null,
+        currency,
       },
     });
     setSent(true);
@@ -343,6 +349,26 @@ export function Estimator({
                     />
                   </Control>
 
+                  {/* currency */}
+                  <Control label={t.controls.currency}>
+                    <div className="grid grid-cols-2 gap-2">
+                      {(["PLN", "EUR"] as Currency[]).map((c) => (
+                        <button
+                          key={c}
+                          onClick={() => setCurrency(c)}
+                          aria-pressed={currency === c}
+                          className={`rounded-xl border py-2.5 font-mono text-sm font-medium transition-colors ${
+                            currency === c
+                              ? "border-teal bg-teal/10 text-teal"
+                              : "border-line text-muted hover:border-teal/50"
+                          }`}
+                        >
+                          {c}
+                        </button>
+                      ))}
+                    </div>
+                  </Control>
+
                   {/* result */}
                   {estimate && (
                     <div className="mt-auto rounded-2xl border border-teal/30 bg-teal/5 p-5">
@@ -350,9 +376,9 @@ export function Estimator({
                         <div>
                           <p className="readout">{t.result.estimateLabel}</p>
                           <p className="font-display text-3xl font-bold text-ink">
-                            {formatPrice(estimate.priceLow, locale)}
+                            {formatPrice(estimate.priceLow, locale, currency)}
                             <span className="text-muted"> – </span>
-                            {formatPrice(estimate.priceHigh, locale)}
+                            {formatPrice(estimate.priceHigh, locale, currency)}
                           </p>
                         </div>
                         <div className="text-right">

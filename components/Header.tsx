@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, Moon, Sun, X } from "lucide-react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
@@ -137,9 +138,10 @@ function LocaleSwitch({ locale, label }: { locale: Locale; label: string }) {
                 {l.toUpperCase()}
               </span>
             ) : (
-              <a
+              <Link
                 href={target}
                 hrefLang={l}
+                scroll={false}
                 aria-label={`${label}: ${l.toUpperCase()}`}
                 onClick={() => {
                   document.cookie = `${LOCALE_COOKIE}=${l};path=/;max-age=31536000;samesite=lax`;
@@ -147,7 +149,7 @@ function LocaleSwitch({ locale, label }: { locale: Locale; label: string }) {
                 className="px-1.5 text-muted transition-colors hover:text-teal"
               >
                 {l.toUpperCase()}
-              </a>
+              </Link>
             )}
           </span>
         );

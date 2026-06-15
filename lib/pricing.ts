@@ -19,6 +19,15 @@ export type MaterialId =
   | "CF"
   | "GF";
 
+/** Currencies the estimate can be displayed in. Base prices are in PLN. */
+export type Currency = "PLN" | "EUR";
+
+/**
+ * Approximate PLN per 1 EUR, used only to display the estimate in euros.
+ * It's a rough display rate — the binding quote is always confirmed by us.
+ */
+export const PLN_PER_EUR = 4.3;
+
 export const PRICING = {
   currency: "PLN",
 
@@ -141,14 +150,20 @@ export function estimateQuote(input: EstimateInput): Estimate {
 
 const round2 = (n: number) => Math.round(n * 100) / 100;
 
-export function formatPrice(n: number, locale: string) {
+export function formatPrice(
+  n: number,
+  locale: string,
+  currency: Currency = "PLN"
+) {
   const intlLocale =
     locale === "pl" ? "pl-PL" : locale === "de" ? "de-DE" : "en-GB";
+  // Base prices are PLN; convert for display when euros are requested.
+  const amount = currency === "EUR" ? n / PLN_PER_EUR : n;
   return new Intl.NumberFormat(intlLocale, {
     style: "currency",
-    currency: PRICING.currency,
+    currency,
     maximumFractionDigits: 0,
-  }).format(n);
+  }).format(amount);
 }
 
 export function formatHours(h: number, locale: string): string {

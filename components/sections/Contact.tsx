@@ -69,9 +69,10 @@ export function Contact({
       const s = handoff.summary;
       const price =
         s.priceLow != null && s.priceHigh != null
-          ? ` · ${formatPrice(s.priceLow, locale)}–${formatPrice(
+          ? ` · ${formatPrice(s.priceLow, locale, s.currency)}–${formatPrice(
               s.priceHigh,
-              locale
+              locale,
+              s.currency
             )}`
           : "";
       data.append(

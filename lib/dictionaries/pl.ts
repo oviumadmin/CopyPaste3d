@@ -254,6 +254,7 @@ export const pl = {
       colorsHint: "Druk wielokolorowy w jednym przebiegu — to nasz konik.",
       infill: "Wypełnienie",
       quantity: "Ilość sztuk",
+      currency: "Waluta",
     },
     result: {
       estimateLabel: "Szacunkowa cena",
