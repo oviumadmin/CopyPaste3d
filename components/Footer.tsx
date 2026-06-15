@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Instagram, Youtube } from "lucide-react";
 import type { Dictionary } from "@/lib/i18n";
+import { isLocale } from "@/lib/i18n";
 import { SITE, isFormBackendConfigured } from "@/lib/site";
 import { Logo } from "./Logo";
 
@@ -21,7 +22,8 @@ export function Footer({ dict }: { dict: Dictionary }) {
   const year = new Date().getFullYear().toString();
   const hasSocial = Object.values(SITE.social).some(Boolean);
   const pathname = usePathname();
-  const locale = pathname.split("/")[1] === "en" ? "en" : "pl";
+  const seg = pathname.split("/")[1];
+  const locale = isLocale(seg) ? seg : "pl";
 
   return (
     <footer className="border-t border-line bg-navy text-mist">

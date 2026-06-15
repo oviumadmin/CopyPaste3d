@@ -26,7 +26,12 @@ export async function generateMetadata({
     description: doc.title,
     alternates: {
       canonical: `/${locale}/privacy`,
-      languages: { pl: "/pl/privacy", en: "/en/privacy", "x-default": "/pl/privacy" },
+      languages: {
+        pl: "/pl/privacy",
+        en: "/en/privacy",
+        de: "/de/privacy",
+        "x-default": "/pl/privacy",
+      },
     },
     robots: { index: true, follow: true },
   };

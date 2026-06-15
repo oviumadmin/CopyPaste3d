@@ -319,4 +319,149 @@ const en: PrivacyDoc = {
   updated: "15 June 2026",
 };
 
-export const privacyContent: Record<Locale, PrivacyDoc> = { pl, en };
+const de: PrivacyDoc = {
+  title: "Datenschutzerklärung",
+  lead: "Maßgeblich für polnische Kunden ist die polnischsprachige Fassung.",
+  sections: [
+    {
+      heading: "1. Verantwortlicher",
+      blocks: [
+        {
+          type: "p",
+          text: "Verantwortlicher für Ihre personenbezogenen Daten ist Robert Czegely, tätig unter der Marke CopyPaste3D, Borowo 77, 64-020 Czempiń, Polen.",
+        },
+        {
+          type: "p",
+          text: "Kontakt: kontakt@copypaste3d.pl · Telefon +48 734 984 760",
+        },
+      ],
+    },
+    {
+      heading: "2. Welche Daten wir verarbeiten",
+      blocks: [
+        {
+          type: "p",
+          text: "Je nachdem, wie Sie uns kontaktieren, können wir verarbeiten:",
+        },
+        {
+          type: "list",
+          items: [
+            "Daten aus dem Kontaktformular / der Angebotsanfrage: Name oder Firmenname, E-Mail, Telefonnummer, Inhalt der Nachricht;",
+            "Dateien, die Sie für ein Angebot hochladen (z. B. STL, STEP, OBJ, 3MF), und deren Inhalt;",
+            "E-Mail-Korrespondenz;",
+            "Daten, die zur Auftragsabwicklung und Rechnungsstellung erforderlich sind (Firmenname, Steuernummer, Anschrift, Versanddaten);",
+            "technische Daten und Cookies (siehe Abschnitt 8).",
+          ],
+        },
+      ],
+    },
+    {
+      heading: "3. Zwecke und Rechtsgrundlagen (DSGVO)",
+      blocks: [
+        {
+          type: "list",
+          items: [
+            "Beantwortung von Anfragen und Erstellung von Angeboten — Art. 6 Abs. 1 lit. b (vorvertragliche Maßnahmen) und lit. f (berechtigtes Interesse an der Bearbeitung von Anfragen);",
+            "Durchführung eines Vertrags / Auftrags — Art. 6 Abs. 1 lit. b;",
+            "Ausstellung und Aufbewahrung von Rechnungen, Buchhaltungs- und Steuerpflichten — Art. 6 Abs. 1 lit. c;",
+            "Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen — Art. 6 Abs. 1 lit. f;",
+            "Newsletter / Marketing (falls angeboten) — Art. 6 Abs. 1 lit. a (Einwilligung).",
+          ],
+        },
+      ],
+    },
+    {
+      heading: "4. Für Angebote übermittelte Dateien",
+      blocks: [
+        {
+          type: "p",
+          text: "Dateien, die Sie zur Angebotserstellung oder Produktion senden (3D-Modelle, Fotos, Dokumentation), verwenden wir ausschließlich zur Erstellung eines Angebots und zur Erbringung der Leistung. Wir geben sie nicht an Dritte weiter und nutzen sie ohne Ihre Einwilligung nicht für andere Zwecke.",
+        },
+      ],
+    },
+    {
+      heading: "5. Empfänger / Auftragsverarbeiter",
+      blocks: [
+        {
+          type: "p",
+          text: "Ihre Daten können vertrauenswürdigen Dienstleistern anvertraut werden, die in unserem Auftrag tätig sind:",
+        },
+        {
+          type: "list",
+          items: [
+            "E-Mail-Anbieter: Zoho;",
+            "Anbieter des Kontaktformulars: Formspree (USA);",
+            "Website-Hosting: Netlify (USA).",
+          ],
+        },
+      ],
+    },
+    {
+      heading: "6. Übermittlung außerhalb des EWR",
+      blocks: [
+        {
+          type: "p",
+          text: "Einige Anbieter haben ihren Sitz außerhalb des EWR (z. B. in den USA). Solche Übermittlungen stützen sich auf geeignete Garantien, z. B. die EU-Standardvertragsklauseln oder die Teilnahme des Anbieters am EU-US Data Privacy Framework.",
+        },
+      ],
+    },
+    {
+      heading: "7. Speicherdauer",
+      blocks: [
+        {
+          type: "list",
+          items: [
+            "Anfragen, die nicht zu einem Vertrag geführt haben — solange dies zur Bearbeitung der Korrespondenz erforderlich ist, sowie für die Dauer der Verjährungsfrist möglicher Ansprüche;",
+            "Vertragsdaten — für die Dauer des Vertrags und die Verjährungsfrist für Ansprüche;",
+            "Buchhaltungsunterlagen und Rechnungen — für den gesetzlich vorgeschriebenen Zeitraum (in der Regel 5 Jahre ab Ende des betreffenden Steuerjahres);",
+            "auf Einwilligung beruhende Daten (z. B. Newsletter) — bis zum Widerruf der Einwilligung.",
+          ],
+        },
+      ],
+    },
+    {
+      heading: "8. Cookies",
+      blocks: [
+        {
+          type: "p",
+          text: "Die Website kann für ihren Betrieb erforderliche Cookies verwenden. Sie können Cookies in den Einstellungen Ihres Browsers verwalten. Falls wir künftig Analyse- oder Marketing-Cookies einsetzen, erfordern diese Ihre Einwilligung über ein Cookie-Banner.",
+        },
+      ],
+    },
+    {
+      heading: "9. Ihre Rechte",
+      blocks: [
+        {
+          type: "p",
+          text: "Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung und Datenübertragbarkeit, das Recht, der Verarbeitung zu widersprechen, und — soweit die Verarbeitung auf einer Einwilligung beruht — das Recht, diese jederzeit zu widerrufen (ohne dass die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung berührt wird).",
+        },
+        {
+          type: "p",
+          text: "Sie haben außerdem das Recht, Beschwerde bei der Aufsichtsbehörde einzulegen: Präsident des Amtes für den Schutz personenbezogener Daten (PUODO), ul. Stawki 2, 00-193 Warschau, Polen.",
+        },
+      ],
+    },
+    {
+      heading: "10. Freiwilligkeit der Datenangabe",
+      blocks: [
+        {
+          type: "p",
+          text: "Die Angabe der Daten ist freiwillig, aber erforderlich, um Ihre Anfrage zu beantworten, ein Angebot zu erstellen und die Leistung zu erbringen.",
+        },
+      ],
+    },
+    {
+      heading: "11. Änderungen",
+      blocks: [
+        {
+          type: "p",
+          text: "Diese Erklärung kann aktualisiert werden. Die aktuelle Fassung ist stets auf dieser Seite verfügbar.",
+        },
+      ],
+    },
+  ],
+  updatedLabel: "Zuletzt aktualisiert",
+  updated: "15. Juni 2026",
+};
+
+export const privacyContent: Record<Locale, PrivacyDoc> = { pl, en, de };

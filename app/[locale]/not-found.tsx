@@ -6,14 +6,17 @@ export default function NotFound() {
     <div className="flex min-h-[60vh] flex-col items-center justify-center px-6 text-center">
       <p className="font-mono text-sm tracking-[0.2em] text-teal">404</p>
       <h1 className="mt-3 font-display text-3xl font-semibold text-ink">
-        Nie znaleziono strony / Page not found
+        Nie znaleziono strony / Page not found / Seite nicht gefunden
       </h1>
-      <div className="mt-6 flex gap-3">
+      <div className="mt-6 flex flex-wrap justify-center gap-3">
         <Link href="/pl" className="btn-primary">
           Strona główna
         </Link>
         <Link href="/en" className="btn-secondary">
           Home
+        </Link>
+        <Link href="/de" className="btn-secondary">
+          Startseite
         </Link>
       </div>
     </div>

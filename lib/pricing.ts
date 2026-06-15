@@ -142,7 +142,9 @@ export function estimateQuote(input: EstimateInput): Estimate {
 const round2 = (n: number) => Math.round(n * 100) / 100;
 
 export function formatPrice(n: number, locale: string) {
-  return new Intl.NumberFormat(locale === "pl" ? "pl-PL" : "en-GB", {
+  const intlLocale =
+    locale === "pl" ? "pl-PL" : locale === "de" ? "de-DE" : "en-GB";
+  return new Intl.NumberFormat(intlLocale, {
     style: "currency",
     currency: PRICING.currency,
     maximumFractionDigits: 0,
@@ -153,6 +155,6 @@ export function formatHours(h: number, locale: string): string {
   if (h < 1) return `${Math.max(5, Math.round(h * 60))} min`;
   const whole = Math.floor(h);
   const mins = Math.round((h - whole) * 60);
-  const hUnit = locale === "pl" ? "godz." : "h";
+  const hUnit = locale === "pl" ? "godz." : locale === "de" ? "Std." : "h";
   return mins > 0 ? `${whole} ${hUnit} ${mins} min` : `${whole} ${hUnit}`;
 }

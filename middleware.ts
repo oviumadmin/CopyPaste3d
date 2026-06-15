@@ -20,7 +20,11 @@ export function middleware(request: NextRequest) {
   if (!locale) {
     const accept = request.headers.get("accept-language") ?? "";
     const first = accept.split(",")[0]?.trim().toLowerCase() ?? "";
-    locale = first.startsWith("en") ? "en" : defaultLocale;
+    locale = first.startsWith("de")
+      ? "de"
+      : first.startsWith("en")
+        ? "en"
+        : defaultLocale;
   }
 
   const url = request.nextUrl.clone();

@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { Menu, Moon, Sun, X } from "lucide-react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import type { Dictionary, Locale } from "@/lib/i18n";
-import { LOCALE_COOKIE } from "@/lib/i18n";
+import { LOCALE_COOKIE, locales } from "@/lib/i18n";
 import { Logo } from "./Logo";
 
 const NAV_IDS = [
@@ -119,23 +119,40 @@ export function Header({ dict, locale }: { dict: Dictionary; locale: Locale }) {
 
 function LocaleSwitch({ locale, label }: { locale: Locale; label: string }) {
   const pathname = usePathname();
-  const other: Locale = locale === "pl" ? "en" : "pl";
-  const target = pathname.replace(`/${locale}`, `/${other}`) || `/${other}`;
 
   return (
-    <a
-      href={target}
-      hrefLang={other}
-      aria-label={`${label}: ${other.toUpperCase()}`}
-      onClick={() => {
-        document.cookie = `${LOCALE_COOKIE}=${other};path=/;max-age=31536000;samesite=lax`;
-      }}
-      className="inline-flex h-10 items-center gap-1 rounded-full border border-line px-3 font-mono text-xs font-medium text-ink transition-colors hover:border-teal hover:text-teal"
+    <div
+      role="group"
+      aria-label={label}
+      className="inline-flex h-10 items-center rounded-full border border-line px-2 font-mono text-xs font-medium"
     >
-      <span className={locale === "pl" ? "text-teal" : "text-muted"}>PL</span>
-      <span className="text-muted">/</span>
-      <span className={locale === "en" ? "text-teal" : "text-muted"}>EN</span>
-    </a>
+      {locales.map((l, i) => {
+        const active = l === locale;
+        const target = pathname.replace(`/${locale}`, `/${l}`) || `/${l}`;
+        return (
+          <span key={l} className="flex items-center">
+            {i > 0 && <span className="px-1 text-muted">/</span>}
+            {active ? (
+              <span className="px-1.5 text-teal" aria-current="true">
+                {l.toUpperCase()}
+              </span>
+            ) : (
+              <a
+                href={target}
+                hrefLang={l}
+                aria-label={`${label}: ${l.toUpperCase()}`}
+                onClick={() => {
+                  document.cookie = `${LOCALE_COOKIE}=${l};path=/;max-age=31536000;samesite=lax`;
+                }}
+                className="px-1.5 text-muted transition-colors hover:text-teal"
+              >
+                {l.toUpperCase()}
+              </a>
+            )}
+          </span>
+        );
+      })}
+    </div>
   );
 }
 
