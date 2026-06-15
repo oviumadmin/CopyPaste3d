@@ -7,14 +7,14 @@ export const pl = {
   meta: {
     title: "Copy Paste 3D — Skanowanie i druk 3D | Kościan, Wielkopolska",
     description:
-      "Skanujemy Twój przedmiot i drukujemy jego wierną kopię — albo dowolnie zmienioną wersję. Wielokolorowy druk FDM, mobilne skanowanie 3D z dojazdem, inżynieria odwrotna i prototypy. Kościan i cała Wielkopolska.",
+      "Skanujemy Twój przedmiot i drukujemy jego wierną kopię — albo dowolnie zmienioną wersję. Wielokolorowy druk FDM, skanowanie 3D, inżynieria odwrotna i prototypy. Kościan i cała Wielkopolska.",
     ogAlt: "Copy Paste 3D — skan i druk 3D w Kościanie",
   },
 
   announcement: {
     messages: [
       "Standardowa realizacja: 2–5 dni roboczych",
-      "Skanowanie 3D z dojazdem — przyjeżdżamy do Ciebie (Wielkopolska)",
+      "Skanowanie 3D z detalem do 0,02 mm — obiekty do 2 m",
       "Druk wielokolorowy — do 4 kolorów w jednym wydruku",
     ],
   },
@@ -55,8 +55,8 @@ export const pl = {
         body: "Drukujemy do 4 kolorów w jednym przebiegu — bez ręcznego malowania i bez sklejania. Logo, oznaczenia i detale wychodzą prosto z druku.",
       },
       {
-        title: "Skanowanie z dojazdem do klienta",
-        body: "Przenośny skaner strukturalny zabieramy do Ciebie — do warsztatu, firmy czy domu. Skanujemy obiekty do ok. 1 m bez wynoszenia ich poza Twoje drzwi.",
+        title: "Skanowanie 3D z dużym detalem",
+        body: "Czteroobiektywowy skaner światła strukturalnego obejmuje obiekty od ok. 10 mm do ok. 2 m, z detalem do 0,02 mm — wystarczająco dokładnie dla zużytych części i misternych powierzchni.",
       },
     ],
   },
@@ -74,7 +74,7 @@ export const pl = {
       },
       {
         title: "Skanowanie 3D",
-        body: "Skaner światła strukturalnego digitalizuje obiekty do ok. 1 m z dokładnością do 0,02 mm. Stacjonarnie u nas albo z dojazdem do Ciebie.",
+        body: "Czteroobiektywowy skaner światła strukturalnego digitalizuje obiekty od ok. 10 mm do ok. 2 m z dokładnością do 0,02 mm. Przedmiot przywieź do naszego warsztatu w Kościanie.",
         example: "Przykład: skan odlewu przed rekonstrukcją",
       },
       {
@@ -106,7 +106,7 @@ export const pl = {
     steps: [
       {
         name: "Skan",
-        body: "Skanujemy Twój przedmiot światłem strukturalnym — u nas albo u Ciebie. Powstaje gęsta chmura punktów wiernie oddająca geometrię.",
+        body: "Skanujemy Twój przedmiot światłem strukturalnym w naszym warsztacie. Powstaje gęsta chmura punktów wiernie oddająca geometrię.",
       },
       {
         name: "Model",
@@ -161,8 +161,8 @@ export const pl = {
         blurb: "Zaprojektowany od zera w Fusion 360, gotowy do wydruku z idealnym pasowaniem.",
       },
       {
-        title: "Skan 3D u klienta — część maszyny",
-        blurb: "Metalowy odlew zeskanowany na miejscu u klienta, zarchiwizowany jako szczelny model.",
+        title: "Skan 3D — część maszyny",
+        blurb: "Metalowy odlew zdigitalizowany i odtworzony jako szczelny model gotowy do druku.",
       },
       {
         title: "Dwa kolory, zero malowania",
@@ -221,9 +221,9 @@ export const pl = {
         name: "Skanowanie 3D",
         role: "Digitalizacja",
         specs: [
-          "Światło strukturalne, dokładność do 0,02 mm",
-          "Obiekty do ok. 1 m",
-          "Stacjonarnie albo z dojazdem do Ciebie",
+          "Czteroobiektywowy skaner światła strukturalnego",
+          "Obiekty od ok. 10 mm do ok. 2 m",
+          "Dokładność do 0,02 mm",
         ],
       },
     ],
@@ -304,11 +304,11 @@ export const pl = {
       },
       {
         q: "Nie mam pliku 3D — tylko fizyczny przedmiot. Co teraz?",
-        a: "To nasza specjalność. Skanujemy przedmiot skanerem światła strukturalnego, a ze skanu robimy model do druku. Możesz przywieźć przedmiot do nas albo zamówić skanowanie z dojazdem.",
+        a: "To nasza specjalność. Skanujemy przedmiot skanerem światła strukturalnego, a ze skanu robimy model do druku. Przywieź przedmiot do naszego warsztatu w Kościanie, a my zajmiemy się resztą.",
       },
       {
-        q: "Jak działa skanowanie z dojazdem?",
-        a: "Przyjeżdżamy z przenośnym skanerem do Twojego domu, warsztatu lub firmy — obsługujemy Kościan i okolice, a po umówieniu całą Wielkopolskę. Skanujemy obiekty do ok. 1 metra. Umów termin przez formularz kontaktowy.",
+        q: "Jakiej wielkości przedmioty skanujecie?",
+        a: "Od małych części około 10 mm po duże obiekty do około 2 m, z detalem do 0,02 mm — czteroobiektywowym skanerem światła strukturalnego. Przywieź przedmiot do naszego warsztatu w Kościanie, resztą zajmiemy się my.",
       },
       {
         q: "Jakie pliki przyjmujecie?",
@@ -345,12 +345,8 @@ export const pl = {
       topics: {
         print: "Wycena druku 3D",
         scan: "Skanowanie / inżynieria odwrotna",
-        onsite: "Skanowanie z dojazdem — rezerwacja",
         other: "Inny temat",
       },
-      date: "Preferowany termin",
-      area: "Miejscowość / adres skanowania",
-      areaPlaceholder: "np. Kościan, ul. …",
       message: "Wiadomość",
       messagePlaceholder:
         "Opisz przedmiot albo projekt: wymiary, materiał, ilość, termin…",
@@ -375,7 +371,7 @@ export const pl = {
       title: "Dane kontaktowe",
       serviceArea: "Obszar działania",
       serviceAreaValue:
-        "Kościan i Wielkopolska — skanowanie z dojazdem, wydruki wysyłamy w całą Polskę",
+        "Kościan — przedmioty przywozisz do warsztatu; wydruki wysyłamy w całą Polskę i UE",
       hoursTitle: "Godziny pracy",
       hours: ["pn–pt 9:00–18:00", "sob 10:00–14:00"],
       mapTitle: "Mapa — Kościan i okolice",
@@ -388,7 +384,7 @@ export const pl = {
     servicesTitle: "Usługi",
     servicesLinks: [
       "Druk wielokolorowy FDM",
-      "Skanowanie 3D z dojazdem",
+      "Skanowanie 3D",
       "Inżynieria odwrotna",
       "Prototypowanie",
       "Figurki i prezenty",

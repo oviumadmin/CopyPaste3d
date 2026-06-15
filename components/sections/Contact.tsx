@@ -43,8 +43,6 @@ export function Contact({
     }
   }, [handoff]);
 
-  const showOnsite = topic === "onsite";
-
   const validate = (form: HTMLFormElement) => {
     const next: Record<string, string> = {};
     const name = (form.elements.namedItem("name") as HTMLInputElement)?.value;
@@ -183,22 +181,6 @@ export function Contact({
                   </select>
                 </Field>
               </div>
-
-              {/* on-site booking fields */}
-              {showOnsite && (
-                <div className="grid gap-4 rounded-2xl border border-teal/30 bg-teal/5 p-4 sm:grid-cols-2">
-                  <Field label={f.date}>
-                    <input name="preferred_date" type="date" className="cp-input" />
-                  </Field>
-                  <Field label={f.area}>
-                    <input
-                      name="location"
-                      placeholder={f.areaPlaceholder}
-                      className="cp-input"
-                    />
-                  </Field>
-                </div>
-              )}
 
               <Field label={f.message} error={errors.message} required>
                 <textarea

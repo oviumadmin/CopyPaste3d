@@ -9,14 +9,14 @@ export const en: Dictionary = {
   meta: {
     title: "Copy Paste 3D — 3D Scanning & Printing | Kościan, Poland",
     description:
-      "We scan your object and print a faithful copy — or a version modified exactly how you need it. Multi-color FDM printing, portable on-site 3D scanning, reverse engineering and prototypes. Based in Kościan, Poland; serving the region and EU clients.",
+      "We scan your object and print a faithful copy — or a version modified exactly how you need it. Multi-color FDM printing, 3D scanning, reverse engineering and prototypes. Based in Kościan, Poland; serving the region and EU clients.",
     ogAlt: "Copy Paste 3D — scan and 3D print in Kościan, Poland",
   },
 
   announcement: {
     messages: [
       "Standard turnaround: 2–5 business days",
-      "On-site 3D scanning — we come to you (Wielkopolska region)",
+      "3D scanning down to 0.02 mm — objects up to 2 m",
       "Multi-color printing — up to 4 colors in one print",
     ],
   },
@@ -57,8 +57,8 @@ export const en: Dictionary = {
         body: "We print up to 4 colors in one job — no hand-painting, no gluing. Logos, markings and details come straight off the printer.",
       },
       {
-        title: "On-site scanning — we come to you",
-        body: "We bring a portable structured-light scanner to your workshop, factory or home. Objects up to ~1 m get digitized without ever leaving your door.",
+        title: "High-detail 3D scanning",
+        body: "A four-lens structured-light scanner captures objects from ~10 mm up to ~2 m, with detail down to 0.02 mm — fine enough for worn parts and intricate surfaces.",
       },
     ],
   },
@@ -76,7 +76,7 @@ export const en: Dictionary = {
       },
       {
         title: "3D scanning",
-        body: "A structured-light scanner digitizes objects up to ~1 m with accuracy down to 0.02 mm. At our workshop or on-site at yours.",
+        body: "A four-lens structured-light scanner digitizes objects from ~10 mm up to ~2 m with accuracy down to 0.02 mm. Bring your object to our Kościan workshop.",
         example: "Example: casting scanned before reconstruction",
       },
       {
@@ -108,7 +108,7 @@ export const en: Dictionary = {
     steps: [
       {
         name: "Scan",
-        body: "We scan your object with structured light — at our place or yours. The result is a dense point cloud that captures the geometry faithfully.",
+        body: "We scan your object with structured light at our workshop. The result is a dense point cloud that captures the geometry faithfully.",
       },
       {
         name: "Model",
@@ -163,8 +163,8 @@ export const en: Dictionary = {
         blurb: "Designed from scratch in Fusion 360, ready for a perfect-fit print.",
       },
       {
-        title: "On-site 3D scan — machine part",
-        blurb: "A metal casting digitized at the client's site, archived as a watertight model.",
+        title: "3D scan — machine part",
+        blurb: "A metal casting digitized and rebuilt as a watertight, print-ready model.",
       },
       {
         title: "Two-color part, zero painting",
@@ -223,9 +223,9 @@ export const en: Dictionary = {
         name: "3D scanning",
         role: "Digitization",
         specs: [
-          "Structured light, accuracy down to 0.02 mm",
-          "Objects up to ~1 m",
-          "At our workshop or on-site at yours",
+          "Four-lens structured-light scanner",
+          "Objects from ~10 mm up to ~2 m",
+          "Accuracy down to 0.02 mm",
         ],
       },
     ],
@@ -306,11 +306,11 @@ export const en: Dictionary = {
       },
       {
         q: "I don't have a 3D file — just a physical object. Now what?",
-        a: "That's our specialty. We scan the object with a structured-light scanner and turn the scan into a printable model. Bring the object to us, or book an on-site scan.",
+        a: "That's our specialty. We scan the object with a structured-light scanner and turn the scan into a printable model. Bring the object to our Kościan workshop and we'll take it from there.",
       },
       {
-        q: "How does on-site scanning work?",
-        a: "We come to your home, workshop or company with a portable scanner — we cover Kościan and the surrounding area, and the whole Wielkopolska region by appointment. We scan objects up to about 1 metre. Book a date through the contact form.",
+        q: "What size objects can you scan?",
+        a: "From small parts around 10 mm up to large objects about 2 m, with detail down to 0.02 mm — using a four-lens structured-light scanner. Bring the object to our Kościan workshop and we'll handle the rest.",
       },
       {
         q: "Which file formats do you accept?",
@@ -347,12 +347,8 @@ export const en: Dictionary = {
       topics: {
         print: "3D printing quote",
         scan: "Scanning / reverse engineering",
-        onsite: "On-site scanning — booking",
         other: "Something else",
       },
-      date: "Preferred date",
-      area: "Scanning location / address",
-      areaPlaceholder: "e.g. Kościan, …",
       message: "Message",
       messagePlaceholder:
         "Describe the object or project: dimensions, material, quantity, deadline…",
@@ -377,7 +373,7 @@ export const en: Dictionary = {
       title: "Contact details",
       serviceArea: "Service area",
       serviceAreaValue:
-        "Kościan & Wielkopolska for on-site scanning; prints ship across Poland and the EU",
+        "Based in Kościan — bring objects to our workshop; prints ship across Poland and the EU",
       hoursTitle: "Opening hours",
       hours: ["Mon–Fri 9:00–18:00", "Sat 10:00–14:00"],
       mapTitle: "Map — Kościan and surrounding area",
@@ -390,7 +386,7 @@ export const en: Dictionary = {
     servicesTitle: "Services",
     servicesLinks: [
       "Multi-color FDM printing",
-      "On-site 3D scanning",
+      "3D scanning",
       "Reverse engineering",
       "Prototyping",
       "Figurines & gifts",
