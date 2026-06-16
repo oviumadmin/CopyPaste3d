@@ -7,10 +7,10 @@ import type { Dictionary } from "./pl";
 
 export const de: Dictionary = {
   meta: {
-    title: "Copy Paste 3D — 3D-Scan & 3D-Druck | Kościan, Polen",
+    title: "Copy Paste 3D — 3D-Scan & 3D-Druck | Czempiń, Polen",
     description:
-      "Wir scannen Ihr Objekt und drucken eine originalgetreue Kopie — oder eine genau nach Ihren Wünschen angepasste Version. Mehrfarbiger FDM-Druck, 3D-Scan, Reverse Engineering und Prototypen. Sitz in Kościan, Polen; wir bedienen die Region und Kunden aus der EU.",
-    ogAlt: "Copy Paste 3D — Scan und 3D-Druck in Kościan, Polen",
+      "Wir scannen Ihr Objekt und drucken eine originalgetreue Kopie — oder eine genau nach Ihren Wünschen angepasste Version. Mehrfarbiger FDM-Druck, 3D-Scan, Reverse Engineering und Prototypen. Sitz in Czempiń, Polen; wir bedienen die Region und Kunden aus der EU.",
+    ogAlt: "Copy Paste 3D — Scan und 3D-Druck in Czempiń, Polen",
   },
 
   announcement: {
@@ -49,7 +49,7 @@ export const de: Dictionary = {
       "Animation: Ein Objekt wird von einem Scanstrahl erfasst, während daneben Schicht für Schicht seine gedruckte Kopie entsteht",
     trust: {
       turnaround: "Lieferzeit 2–5 Werktage",
-      location: "Kościan, Polen",
+      location: "Czempiń, Polen",
       materials: "PLA · PETG · ABS · PC · PA · CF/GF",
       privacy: "Ihre Datei bleibt bei Ihnen",
     },
@@ -82,7 +82,7 @@ export const de: Dictionary = {
       },
       {
         title: "3D-Scan",
-        body: "Ein Vierlinsen-Streifenlichtscanner digitalisiert Objekte von ~10 mm bis ~2 m mit einer Genauigkeit bis 0,02 mm. Bringen Sie Ihr Objekt in unsere Werkstatt in Kościan.",
+        body: "Ein Vierlinsen-Streifenlichtscanner digitalisiert Objekte von ~10 mm bis ~2 m mit einer Genauigkeit bis 0,02 mm. Bringen Sie Ihr Objekt in unsere Werkstatt in Czempiń.",
         example: "Beispiel: Gussteil, vor der Rekonstruktion gescannt",
       },
       {
@@ -288,7 +288,7 @@ export const de: Dictionary = {
       {
         quote:
           "An einer Maschine, die niemand mehr wartet, ist ein Knopf abgebrochen. Zwei Tage später hatte ich drei Ersatzteile — sie passen besser als das Original.",
-        author: "Werkstattkunde, Kościan",
+        author: "Werkstattkunde, Czempiń",
       },
       {
         quote:
@@ -313,11 +313,11 @@ export const de: Dictionary = {
       },
       {
         q: "Ich habe keine 3D-Datei — nur ein physisches Objekt. Was nun?",
-        a: "Das ist unsere Spezialität. Wir scannen das Objekt mit einem Streifenlichtscanner und machen aus dem Scan ein druckbares Modell. Bringen Sie das Objekt in unsere Werkstatt in Kościan, den Rest übernehmen wir.",
+        a: "Das ist unsere Spezialität. Wir scannen das Objekt mit einem Streifenlichtscanner und machen aus dem Scan ein druckbares Modell. Bringen Sie das Objekt in unsere Werkstatt in Czempiń, den Rest übernehmen wir.",
       },
       {
         q: "Welche Objektgrößen können Sie scannen?",
-        a: "Von kleinen Teilen ab etwa 10 mm bis zu großen Objekten von rund 2 m, mit Details bis 0,02 mm — mit einem Vierlinsen-Streifenlichtscanner. Bringen Sie das Objekt in unsere Werkstatt in Kościan, um den Rest kümmern wir uns.",
+        a: "Von kleinen Teilen ab etwa 10 mm bis zu großen Objekten von rund 2 m, mit Details bis 0,02 mm — mit einem Vierlinsen-Streifenlichtscanner. Bringen Sie das Objekt in unsere Werkstatt in Czempiń, um den Rest kümmern wir uns.",
       },
       {
         q: "Welche Dateiformate akzeptieren Sie?",
@@ -380,10 +380,10 @@ export const de: Dictionary = {
       title: "Kontaktdaten",
       serviceArea: "Einzugsgebiet",
       serviceAreaValue:
-        "Sitz in Kościan — Objekte bringen Sie in unsere Werkstatt; Drucke versenden wir in ganz Polen und die EU",
+        "Sitz in Czempiń — Objekte bringen Sie in unsere Werkstatt; Drucke versenden wir in ganz Polen und die EU",
       hoursTitle: "Öffnungszeiten",
       hours: ["Mo–Fr 9:00–18:00", "Sa 10:00–14:00"],
-      mapTitle: "Karte — Kościan und Umgebung",
+      mapTitle: "Karte — Czempiń und Umgebung",
     },
   },
 
@@ -406,7 +406,7 @@ export const de: Dictionary = {
     newsletterSuccess: "Abonniert! Bis bald.",
     paymentsTitle: "Zahlungen",
     legalLine: "Copy Paste 3D · NIP {nip} · REGON {regon}",
-    copyright: "© {year} Copy Paste 3D, Kościan, Polen. Alle Rechte vorbehalten.",
+    copyright: "© {year} Copy Paste 3D, Czempiń, Polen. Alle Rechte vorbehalten.",
     socialLabel: "Finden Sie uns",
     privacy: "Datenschutzerklärung",
   },

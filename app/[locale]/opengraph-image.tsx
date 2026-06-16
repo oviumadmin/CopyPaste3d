@@ -66,7 +66,7 @@ export default async function Image({
           </div>
         </div>
         <div style={{ fontSize: 24, color: "#93ADC0" }}>
-          Kościan · Wielkopolska · Polska
+          Czempiń · Wielkopolska · Polska
         </div>
       </div>
     ),

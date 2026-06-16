@@ -5,10 +5,10 @@
 
 export const pl = {
   meta: {
-    title: "Copy Paste 3D — Skanowanie i druk 3D | Kościan, Wielkopolska",
+    title: "Copy Paste 3D — Skanowanie i druk 3D | Czempiń, Wielkopolska",
     description:
-      "Skanujemy Twój przedmiot i drukujemy jego wierną kopię — albo dowolnie zmienioną wersję. Wielokolorowy druk FDM, skanowanie 3D, inżynieria odwrotna i prototypy. Kościan i cała Wielkopolska.",
-    ogAlt: "Copy Paste 3D — skan i druk 3D w Kościanie",
+      "Skanujemy Twój przedmiot i drukujemy jego wierną kopię — albo dowolnie zmienioną wersję. Wielokolorowy druk FDM, skanowanie 3D, inżynieria odwrotna i prototypy. Czempiń i cała Wielkopolska.",
+    ogAlt: "Copy Paste 3D — skan i druk 3D w Czempiniu",
   },
 
   announcement: {
@@ -47,7 +47,7 @@ export const pl = {
       "Animacja: przedmiot jest skanowany wiązką światła, a obok warstwa po warstwie powstaje jego drukowana kopia",
     trust: {
       turnaround: "Realizacja 2–5 dni roboczych",
-      location: "Kościan, Wielkopolska",
+      location: "Czempiń, Wielkopolska",
       materials: "PLA · PETG · ABS · PC · PA · CF/GF",
       privacy: "Twój plik zostaje u Ciebie",
     },
@@ -80,7 +80,7 @@ export const pl = {
       },
       {
         title: "Skanowanie 3D",
-        body: "Czteroobiektywowy skaner światła strukturalnego digitalizuje obiekty od ok. 10 mm do ok. 2 m z dokładnością do 0,02 mm. Przedmiot przywieź do naszego warsztatu w Kościanie.",
+        body: "Czteroobiektywowy skaner światła strukturalnego digitalizuje obiekty od ok. 10 mm do ok. 2 m z dokładnością do 0,02 mm. Przedmiot przywieź do naszego warsztatu w Czempiniu.",
         example: "Przykład: skan odlewu przed rekonstrukcją",
       },
       {
@@ -286,7 +286,7 @@ export const pl = {
       {
         quote:
           "Pękło pokrętło w maszynie, której nikt już nie serwisuje. Po dwóch dniach miałem trzy zapasowe — pasują lepiej niż oryginał.",
-        author: "Klient warsztatowy, Kościan",
+        author: "Klient warsztatowy, Czempiń",
       },
       {
         quote:
@@ -311,11 +311,11 @@ export const pl = {
       },
       {
         q: "Nie mam pliku 3D — tylko fizyczny przedmiot. Co teraz?",
-        a: "To nasza specjalność. Skanujemy przedmiot skanerem światła strukturalnego, a ze skanu robimy model do druku. Przywieź przedmiot do naszego warsztatu w Kościanie, a my zajmiemy się resztą.",
+        a: "To nasza specjalność. Skanujemy przedmiot skanerem światła strukturalnego, a ze skanu robimy model do druku. Przywieź przedmiot do naszego warsztatu w Czempiniu, a my zajmiemy się resztą.",
       },
       {
         q: "Jakiej wielkości przedmioty skanujecie?",
-        a: "Od małych części około 10 mm po duże obiekty do około 2 m, z detalem do 0,02 mm — czteroobiektywowym skanerem światła strukturalnego. Przywieź przedmiot do naszego warsztatu w Kościanie, resztą zajmiemy się my.",
+        a: "Od małych części około 10 mm po duże obiekty do około 2 m, z detalem do 0,02 mm — czteroobiektywowym skanerem światła strukturalnego. Przywieź przedmiot do naszego warsztatu w Czempiniu, resztą zajmiemy się my.",
       },
       {
         q: "Jakie pliki przyjmujecie?",
@@ -378,10 +378,10 @@ export const pl = {
       title: "Dane kontaktowe",
       serviceArea: "Obszar działania",
       serviceAreaValue:
-        "Kościan — przedmioty przywozisz do warsztatu; wydruki wysyłamy w całą Polskę i UE",
+        "Czempiń — przedmioty przywozisz do warsztatu; wydruki wysyłamy w całą Polskę i UE",
       hoursTitle: "Godziny pracy",
       hours: ["pn–pt 9:00–18:00", "sob 10:00–14:00"],
-      mapTitle: "Mapa — Kościan i okolice",
+      mapTitle: "Mapa — Czempiń i okolice",
     },
   },
 
@@ -404,7 +404,7 @@ export const pl = {
     newsletterSuccess: "Zapisano! Do usłyszenia.",
     paymentsTitle: "Płatności",
     legalLine: "Copy Paste 3D · NIP {nip} · REGON {regon}",
-    copyright: "© {year} Copy Paste 3D, Kościan. Wszystkie prawa zastrzeżone.",
+    copyright: "© {year} Copy Paste 3D, Czempiń. Wszystkie prawa zastrzeżone.",
     socialLabel: "Znajdź nas",
     privacy: "Polityka prywatności",
   },

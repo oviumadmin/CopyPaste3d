@@ -11,8 +11,8 @@ import { Reveal } from "../ui/Reveal";
 
 type SubmitState = "idle" | "submitting" | "success" | "demo" | "error";
 
-/** OSM embed bbox (minLon,minLat,maxLon,maxLat) framing Kościan. */
-const MAP_BBOX = "16.555,52.060,16.735,52.115";
+/** OSM embed bbox (minLon,minLat,maxLon,maxLat) framing Czempiń. */
+const MAP_BBOX = "16.700,52.128,16.832,52.188";
 
 export function Contact({
   dict,

@@ -17,12 +17,12 @@ export const SITE = {
   address: {
     showStreet: false,
     street: "<<ADDRESS>>",
-    city: "Kościan",
-    postalCode: "64-000",
+    city: "Czempiń",
+    postalCode: "64-020",
     region: "Wielkopolska",
     country: "PL",
-    /** Kościan town centre — used in LocalBusiness JSON-LD geo. */
-    geo: { lat: 52.0866, lng: 16.6452 },
+    /** Czempiń town centre — used in LocalBusiness JSON-LD geo. */
+    geo: { lat: 52.1586, lng: 16.7656 },
   },
 
   // Leave empty to hide the NIP/REGON legal line until you have the numbers.

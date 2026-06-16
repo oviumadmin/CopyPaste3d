@@ -34,6 +34,7 @@ export function buildJsonLd(dict: Dictionary, locale: Locale) {
       longitude: SITE.address.geo.lng,
     },
     areaServed: [
+      { "@type": "City", name: "Czempiń" },
       { "@type": "City", name: "Kościan" },
       { "@type": "AdministrativeArea", name: "Wielkopolska" },
       { "@type": "Country", name: "Poland" },

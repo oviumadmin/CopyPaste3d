@@ -5,6 +5,7 @@ import "../globals.css";
 import { getDictionary, isLocale, locales, type Locale } from "@/lib/i18n";
 import { SITE } from "@/lib/site";
 import { Analytics } from "@/components/Analytics";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 const manrope = Manrope({
   subsets: ["latin", "latin-ext"],
@@ -105,6 +106,7 @@ export default async function LocaleLayout({
       </head>
       <body className="font-body">
         {children}
+        <WhatsAppButton locale={locale} />
         <Analytics />
       </body>
     </html>
