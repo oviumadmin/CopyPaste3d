@@ -47,7 +47,9 @@
       "WebFetch(domain:copypaste3d.netlify.app)",
       "WebFetch(domain:copypaste3d.pl)",
       "Bash(echo \"---exit: $?---\")",
-      "Bash(git check-ignore *)"
+      "Bash(git check-ignore *)",
+      "Bash(git commit -q -m 'Redesign homepage around an upload-first hero; fix mobile responsiveness *)",
+      "Bash(git commit -q -m 'Update local Claude Code permission allowlist *)"
     ]
   }
 }
