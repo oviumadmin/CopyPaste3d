@@ -1,9 +1,11 @@
 # Netlify build config for this Next.js 15 app.
 # The Next.js runtime plugin handles SSR, middleware, the dynamic OG image
-# and next/image — do not set a publish directory manually; the plugin does.
+# and next/image. Publish points at the Next build output (.next): the plugin
+# requires publish to differ from the repo root / base directory.
 
 [build]
   command = "next build"
+  publish = ".next"
 
 [build.environment]
   NODE_VERSION = "20"
