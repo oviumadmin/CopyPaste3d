@@ -132,15 +132,15 @@ export function Contact({
       <div className="section-wrap">
         <SectionHeader kicker={t.kicker} title={t.title} lead={t.lead} />
 
-        <div className="mt-12 grid gap-8 lg:grid-cols-[1.4fr_1fr]">
+        <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-[1.4fr_1fr]">
           {/* form */}
           <Reveal>
             <form
               onSubmit={onSubmit}
               noValidate
-              className="card grid gap-4 p-6 sm:p-7"
+              className="card grid grid-cols-1 gap-4 p-6 sm:p-7"
             >
-              <div className="grid gap-4 sm:grid-cols-2">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <Field label={f.name} error={errors.name} required>
                   <input name="name" className="cp-input" autoComplete="name" />
                 </Field>
@@ -154,7 +154,7 @@ export function Contact({
                 </Field>
               </div>
 
-              <div className="grid gap-4 sm:grid-cols-2">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <Field label={f.phone}>
                   <input
                     name="phone"

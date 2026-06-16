@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import {
   UploadCloud,
   FileBox,
@@ -20,6 +20,7 @@ import {
 } from "@/lib/pricing";
 import type { MeshStats } from "@/lib/mesh";
 import { setQuoteHandoff } from "@/lib/quote-store";
+import { usePendingUpload, setPendingUpload } from "@/lib/upload-store";
 import type { Object3D } from "three";
 import { SectionHeader } from "../ui/SectionHeader";
 import { Reveal } from "../ui/Reveal";
@@ -108,6 +109,16 @@ export function Estimator({
     },
     [handleFile]
   );
+
+  // Pick up a file dropped in the hero: run the same flow and clear the
+  // handoff so it fires once.
+  const pendingUpload = usePendingUpload();
+  useEffect(() => {
+    if (pendingUpload) {
+      handleFile(pendingUpload);
+      setPendingUpload(null);
+    }
+  }, [pendingUpload, handleFile]);
 
   const reset = () => {
     fileRef.current = null;

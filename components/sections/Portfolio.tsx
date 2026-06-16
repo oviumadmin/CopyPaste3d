@@ -1,46 +1,18 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import { Box, SlidersHorizontal } from "lucide-react";
 import type { Dictionary } from "@/lib/i18n";
-import {
-  portfolioItems,
-  type PortfolioCategory,
-  type PortfolioItem,
-} from "@/lib/portfolio";
+import { portfolioItems, type PortfolioItem } from "@/lib/portfolio";
 import { SectionHeader } from "../ui/SectionHeader";
 import { PrintInReveal } from "../ui/PrintInReveal";
 import { Modal } from "../ui/Modal";
 import { BeforeAfterSlider } from "../ui/BeforeAfterSlider";
 import { LazyModelViewer } from "../three/LazyModelViewer";
 
-type Filter = "all" | PortfolioCategory;
-const FILTERS: Filter[] = [
-  "all",
-  "figurines",
-  "parts",
-  "prototypes",
-  "repairs",
-  "scans",
-];
-
 export function Portfolio({ dict }: { dict: Dictionary }) {
-  const [filter, setFilter] = useState<Filter>("all");
   const [active, setActive] = useState<number | null>(null);
-
-  const visible = useMemo(
-    () =>
-      portfolioItems
-        .map((item, index) => ({ item, index }))
-        .filter(({ item }) => filter === "all" || item.category === filter),
-    [filter]
-  );
-
-  const label = (f: Filter) =>
-    f === "all"
-      ? dict.portfolio.filterAll
-      : dict.portfolio.categories[f];
 
   return (
     <section id="portfolio" className="scroll-mt-24 py-20 sm:py-24">
@@ -51,37 +23,14 @@ export function Portfolio({ dict }: { dict: Dictionary }) {
           lead={dict.portfolio.lead}
         />
 
-        {/* filters */}
-        <div
-          className="mt-8 flex flex-wrap gap-2"
-          role="tablist"
-          aria-label={dict.portfolio.kicker}
-        >
-          {FILTERS.map((f) => (
-            <button
-              key={f}
-              role="tab"
-              aria-selected={filter === f}
-              onClick={() => setFilter(f)}
-              className={`rounded-full border px-4 py-2 text-sm font-medium transition-colors ${
-                filter === f
-                  ? "border-teal bg-teal text-navy"
-                  : "border-line text-muted hover:border-teal hover:text-teal"
-              }`}
-            >
-              {label(f)}
-            </button>
-          ))}
-        </div>
-
-        {/* grid */}
+        {/* grid — at this scale we show every piece; no category filter */}
         <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {visible.map(({ item, index }, i) => (
+          {portfolioItems.map((item, i) => (
             <PrintInReveal key={item.id} delay={(i % 3) * 0.06}>
               <PortfolioCard
                 item={item}
                 dict={dict}
-                onOpen={() => setActive(index)}
+                onOpen={() => setActive(i)}
               />
             </PrintInReveal>
           ))}
@@ -127,7 +76,7 @@ function PortfolioCard({
           alt={copy.title}
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
         />
         <span className="absolute left-3 top-3 rounded-full bg-navy/80 px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-mist">
           {dict.portfolio.categories[item.category]}

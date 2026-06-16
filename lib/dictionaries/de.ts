@@ -47,6 +47,12 @@ export const de: Dictionary = {
     printLabel: "Druck",
     animationAlt:
       "Animation: Ein Objekt wird von einem Scanstrahl erfasst, während daneben Schicht für Schicht seine gedruckte Kopie entsteht",
+    trust: {
+      turnaround: "Lieferzeit 2–5 Werktage",
+      location: "Kościan, Polen",
+      materials: "PLA · PETG · ABS · PC · PA · CF/GF",
+      privacy: "Ihre Datei bleibt bei Ihnen",
+    },
   },
 
   differentiators: {
@@ -128,7 +134,7 @@ export const de: Dictionary = {
   portfolio: {
     kicker: "Portfolio",
     title: "Sehen Sie, was wir bisher kopiert haben",
-    lead: "Nach Kategorie filtern. Mit dem 3D-Symbol markierte Stücke öffnen sich in einem interaktiven Viewer, den Sie selbst drehen können.",
+    lead: "Mit dem 3D-Symbol markierte Stücke öffnen sich in einem interaktiven Viewer, den Sie selbst drehen können.",
     filterAll: "Alle",
     categories: {
       figurines: "Figuren",
@@ -176,7 +182,7 @@ export const de: Dictionary = {
   materials: {
     kicker: "Materialien & Farben",
     title: "Wir drucken Farbe, wir lackieren sie nicht",
-    lead: "Wir führen bis zu 4 Filamente in einen einzigen Druck. Wählen Sie unten eine Kombination und sehen Sie sie am Modell — genau so kommt sie aus dem Drucker.",
+    lead: "Wir drucken im FDM-Verfahren mit einer breiten Materialpalette — bis zu 4 Farben in einem Durchgang, direkt aus dem Drucker, ohne Lackieren.",
     visualizerTitle: "Farbvisualizer",
     visualizerHint: "Klicken Sie auf einen Slot, dann auf eine Farbe aus der Palette. Das Modell dreht sich — greifen und ziehen Sie es.",
     slotLabel: "Slot",

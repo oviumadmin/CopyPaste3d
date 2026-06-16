@@ -47,6 +47,12 @@ export const en: Dictionary = {
     printLabel: "print",
     animationAlt:
       "Animation: an object is swept by a scanning beam while its printed copy builds up layer by layer beside it",
+    trust: {
+      turnaround: "Turnaround in 2–5 business days",
+      location: "Kościan, Poland",
+      materials: "PLA · PETG · ABS · PC · PA · CF/GF",
+      privacy: "Your file stays private",
+    },
   },
 
   differentiators: {
@@ -128,7 +134,7 @@ export const en: Dictionary = {
   portfolio: {
     kicker: "Portfolio",
     title: "See what we've copied so far",
-    lead: "Filter by category. Pieces marked with the 3D icon open in an interactive viewer you can rotate yourself.",
+    lead: "Pieces marked with the 3D icon open in an interactive viewer you can rotate yourself.",
     filterAll: "All",
     categories: {
       figurines: "Figurines",
@@ -176,7 +182,7 @@ export const en: Dictionary = {
   materials: {
     kicker: "Materials & colors",
     title: "We print color, we don't paint it",
-    lead: "We feed up to 4 filaments into a single print. Pick a combination below and see it on the model — that's exactly how it comes off the printer.",
+    lead: "We print in FDM across a broad range of materials — up to 4 colors in a single run, straight off the printer, no painting.",
     visualizerTitle: "Color visualizer",
     visualizerHint: "Click a slot, then a color from the palette. The model rotates — grab and drag it.",
     slotLabel: "Slot",

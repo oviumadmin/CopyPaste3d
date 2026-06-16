@@ -5,12 +5,9 @@ import { AnnouncementBar } from "@/components/AnnouncementBar";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/sections/Hero";
-import { Differentiators } from "@/components/sections/Differentiators";
 import { Services } from "@/components/sections/Services";
-import { Process } from "@/components/sections/Process";
 import { Portfolio } from "@/components/sections/Portfolio";
 import { Materials } from "@/components/sections/Materials";
-import { Capabilities } from "@/components/sections/Capabilities";
 import { Estimator } from "@/components/sections/Estimator";
 import { Faq } from "@/components/sections/Faq";
 import { Contact } from "@/components/sections/Contact";
@@ -41,12 +38,9 @@ export default async function HomePage({
       <Header dict={dict} locale={locale} />
       <main id="main">
         <Hero dict={dict} />
-        <Differentiators dict={dict} />
         <Services dict={dict} />
-        <Process dict={dict} />
         <Portfolio dict={dict} />
-        <Materials dict={dict} locale={locale} />
-        <Capabilities dict={dict} />
+        <Materials dict={dict} />
         <Estimator dict={dict} locale={locale} />
         <Faq dict={dict} />
         <Contact dict={dict} locale={locale} />

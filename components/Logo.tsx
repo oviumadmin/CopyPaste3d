@@ -25,12 +25,23 @@ export function LogoMark({ className = "h-9 w-9" }: { className?: string }) {
   );
 }
 
-export function Logo({ compact = false }: { compact?: boolean }) {
+export function Logo({
+  compact = false,
+  hideWordmarkOnMobile = false,
+}: {
+  compact?: boolean;
+  /** Drop the wordmark below ~440px so the header fits on small phones. */
+  hideWordmarkOnMobile?: boolean;
+}) {
   return (
     <span className="inline-flex items-center gap-2.5">
       <LogoMark className="h-9 w-9 text-navy dark:text-teal" />
       {!compact && (
-        <span className="font-display text-lg font-semibold tracking-tight text-ink">
+        <span
+          className={`font-display text-lg font-semibold tracking-tight text-ink${
+            hideWordmarkOnMobile ? " hidden min-[440px]:inline" : ""
+          }`}
+        >
           Copy<span className="text-teal">Paste</span>3D
         </span>
       )}

@@ -45,6 +45,12 @@ export const pl = {
     printLabel: "wydruk",
     animationAlt:
       "Animacja: przedmiot jest skanowany wiązką światła, a obok warstwa po warstwie powstaje jego drukowana kopia",
+    trust: {
+      turnaround: "Realizacja 2–5 dni roboczych",
+      location: "Kościan, Wielkopolska",
+      materials: "PLA · PETG · ABS · PC · PA · CF/GF",
+      privacy: "Twój plik zostaje u Ciebie",
+    },
   },
 
   differentiators: {
@@ -126,7 +132,7 @@ export const pl = {
   portfolio: {
     kicker: "Realizacje",
     title: "Zobacz, co już skopiowaliśmy",
-    lead: "Filtruj według kategorii. Realizacje oznaczone ikoną 3D obejrzysz w interaktywnym podglądzie i obrócisz samodzielnie.",
+    lead: "Realizacje oznaczone ikoną 3D obejrzysz w interaktywnym podglądzie i obrócisz samodzielnie.",
     filterAll: "Wszystkie",
     categories: {
       figurines: "Figurki",
@@ -174,7 +180,7 @@ export const pl = {
   materials: {
     kicker: "Materiały i kolory",
     title: "Kolor drukujemy, nie malujemy",
-    lead: "Podajemy do 4 filamentów w jednym wydruku. Wybierz kombinację poniżej i zobacz ją na modelu — dokładnie tak działa to na druku.",
+    lead: "Drukujemy w FDM z szerokiej gamy materiałów — do 4 kolorów w jednym przebiegu, prosto z druku, bez malowania.",
     visualizerTitle: "Wizualizer kolorów",
     visualizerHint: "Kliknij slot, potem kolor z palety. Model obraca się — złap i przeciągnij.",
     slotLabel: "Slot",

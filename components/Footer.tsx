@@ -9,14 +9,7 @@ import { isLocale } from "@/lib/i18n";
 import { SITE, isFormBackendConfigured } from "@/lib/site";
 import { Logo } from "./Logo";
 
-const NAV_IDS = [
-  "services",
-  "portfolio",
-  "materials",
-  "estimator",
-  "faq",
-  "contact",
-] as const;
+const NAV_IDS = ["services", "portfolio", "estimator", "contact"] as const;
 
 export function Footer({ dict }: { dict: Dictionary }) {
   const year = new Date().getFullYear().toString();

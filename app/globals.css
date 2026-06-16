@@ -119,7 +119,7 @@ body {
 
   /* Form controls */
   .cp-input {
-    @apply h-11 w-full rounded-xl border border-line bg-bg px-4 text-sm text-ink placeholder:text-muted transition-colors focus:border-teal;
+    @apply h-11 w-full min-w-0 rounded-xl border border-line bg-bg px-4 text-sm text-ink placeholder:text-muted transition-colors focus:border-teal;
   }
   textarea.cp-input {
     @apply h-auto py-3;

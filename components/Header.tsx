@@ -9,14 +9,9 @@ import type { Dictionary, Locale } from "@/lib/i18n";
 import { LOCALE_COOKIE, locales } from "@/lib/i18n";
 import { Logo } from "./Logo";
 
-const NAV_IDS = [
-  "services",
-  "portfolio",
-  "materials",
-  "estimator",
-  "faq",
-  "contact",
-] as const;
+// A single-page site stays scannable with a short nav; the drop-zone in the
+// hero is the primary action, and "Get a quote" sits beside the nav.
+const NAV_IDS = ["services", "portfolio", "estimator", "contact"] as const;
 
 export function Header({ dict, locale }: { dict: Dictionary; locale: Locale }) {
   const [scrolled, setScrolled] = useState(false);
@@ -30,8 +25,20 @@ export function Header({ dict, locale }: { dict: Dictionary; locale: Locale }) {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Close the mobile menu when a link is chosen
-  const close = () => setOpen(false);
+  // Mobile nav: drive the scroll ourselves so it can't race the menu's
+  // collapse animation. We close first, then scroll to the section (which
+  // honours each section's scroll-mt for the sticky header).
+  const goTo = (e: React.MouseEvent, id: string) => {
+    // let modifier/middle clicks fall through to the browser
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0)
+      return;
+    e.preventDefault();
+    setOpen(false);
+    document
+      .getElementById(id)
+      ?.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "start" });
+    history.replaceState(null, "", `#${id}`);
+  };
 
   const links = NAV_IDS.map((id) => ({
     id,
@@ -46,7 +53,7 @@ export function Header({ dict, locale }: { dict: Dictionary; locale: Locale }) {
     >
       <div className="section-wrap flex h-16 items-center justify-between gap-4">
         <a href={`/${locale}`} aria-label="Copy Paste 3D" className="shrink-0">
-          <Logo />
+          <Logo hideWordmarkOnMobile />
         </a>
 
         <nav
@@ -97,7 +104,7 @@ export function Header({ dict, locale }: { dict: Dictionary; locale: Locale }) {
                 <a
                   key={l.id}
                   href={`#${l.id}`}
-                  onClick={close}
+                  onClick={(e) => goTo(e, l.id)}
                   className="rounded-xl px-3 py-3 text-base font-medium text-ink hover:bg-surface-2"
                 >
                   {l.label}
@@ -105,7 +112,7 @@ export function Header({ dict, locale }: { dict: Dictionary; locale: Locale }) {
               ))}
               <a
                 href="#estimator"
-                onClick={close}
+                onClick={(e) => goTo(e, "estimator")}
                 className="btn-primary mt-2 w-full"
               >
                 {dict.nav.getQuote}
