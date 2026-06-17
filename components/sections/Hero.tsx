@@ -6,6 +6,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import { UploadCloud, Clock, MapPin, Layers, ShieldCheck } from "lucide-react";
 import type { Dictionary } from "@/lib/i18n";
 import { setPendingUpload } from "@/lib/upload-store";
+import { useScrollToId } from "@/lib/use-scroll-to";
 
 /**
  * Full-bleed cinematic hero. The background image carries the signature
@@ -26,6 +27,7 @@ import { setPendingUpload } from "@/lib/upload-store";
 export function Hero({ dict }: { dict: Dictionary }) {
   const reduced = useReducedMotion();
   const [dragging, setDragging] = useState(false);
+  const scrollToId = useScrollToId();
 
   const enter = (delay: number) =>
     reduced
@@ -42,12 +44,13 @@ export function Hero({ dict }: { dict: Dictionary }) {
 
   // Stash the file for the Estimator and scroll down to it. The Estimator
   // validates format/size and runs the parse — the hero just captures.
-  const handleFile = useCallback((file: File) => {
-    setPendingUpload(file);
-    document
-      .getElementById("estimator")
-      ?.scrollIntoView({ behavior: "smooth", block: "start" });
-  }, []);
+  const handleFile = useCallback(
+    (file: File) => {
+      setPendingUpload(file);
+      scrollToId("estimator");
+    },
+    [scrollToId]
+  );
 
   const onDrop = useCallback(
     (e: React.DragEvent) => {

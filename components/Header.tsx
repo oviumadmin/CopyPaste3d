@@ -7,6 +7,7 @@ import { Menu, Moon, Sun, X } from "lucide-react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import type { Dictionary, Locale } from "@/lib/i18n";
 import { LOCALE_COOKIE, locales } from "@/lib/i18n";
+import { useScrollToId } from "@/lib/use-scroll-to";
 import { Logo } from "./Logo";
 
 // A single-page site stays scannable with a short nav; the drop-zone in the
@@ -17,6 +18,7 @@ export function Header({ dict, locale }: { dict: Dictionary; locale: Locale }) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const reduced = useReducedMotion();
+  const scrollToId = useScrollToId();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -34,9 +36,7 @@ export function Header({ dict, locale }: { dict: Dictionary; locale: Locale }) {
       return;
     e.preventDefault();
     setOpen(false);
-    document
-      .getElementById(id)
-      ?.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "start" });
+    scrollToId(id);
     history.replaceState(null, "", `#${id}`);
   };
 

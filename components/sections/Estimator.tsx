@@ -21,6 +21,7 @@ import {
 import type { MeshStats } from "@/lib/mesh";
 import { setQuoteHandoff } from "@/lib/quote-store";
 import { usePendingUpload, setPendingUpload } from "@/lib/upload-store";
+import { useScrollToId } from "@/lib/use-scroll-to";
 import type { Object3D } from "three";
 import { SectionHeader } from "../ui/SectionHeader";
 import { Reveal } from "../ui/Reveal";
@@ -54,6 +55,7 @@ export function Estimator({
   locale: Locale;
 }) {
   const t = dict.estimator;
+  const scrollToId = useScrollToId();
   const [status, setStatus] = useState<Status>({ kind: "empty" });
   const [dragging, setDragging] = useState(false);
   const [sent, setSent] = useState(false);
@@ -153,9 +155,7 @@ export function Estimator({
       },
     });
     setSent(true);
-    document
-      .getElementById("contact")
-      ?.scrollIntoView({ behavior: "smooth", block: "start" });
+    scrollToId("contact");
   };
 
   return (
