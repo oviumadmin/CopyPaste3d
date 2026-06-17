@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { m, useReducedMotion } from "framer-motion";
 
 /**
  * THE SIGNATURE ELEMENT — scan → print duplication.
@@ -164,7 +164,7 @@ export function ScanPrintAnimation({
         ))}
 
         {!reduced && (
-          <motion.g
+          <m.g
             initial={false}
             animate={{
               y: [SCAN_TOP, SCAN_TOP, SCAN_BOTTOM, SCAN_BOTTOM, SCAN_BOTTOM],
@@ -202,7 +202,7 @@ export function ScanPrintAnimation({
               stroke="#E8F4F3"
               strokeWidth="0.8"
             />
-          </motion.g>
+          </m.g>
         )}
       </g>
 
@@ -225,7 +225,7 @@ export function ScanPrintAnimation({
           />
         </g>
       ) : (
-        <motion.g
+        <m.g
           initial={false}
           animate={{ opacity: [0, 0, 1, 1, 0, 0] }}
           transition={{
@@ -242,7 +242,7 @@ export function ScanPrintAnimation({
             ease: "linear",
           }}
         >
-          <motion.line
+          <m.line
             x1={LEFT_CX + A + 24}
             y1={streamY}
             x2={RIGHT_CX - A - 30}
@@ -258,7 +258,7 @@ export function ScanPrintAnimation({
             d={`M ${RIGHT_CX - A - 30} ${streamY - 5} l 10 5 -10 5 Z`}
             fill="#14B8B1"
           />
-        </motion.g>
+        </m.g>
       )}
 
       {/* ---------------- right: the copy, printing in -------------------- */}
@@ -275,7 +275,7 @@ export function ScanPrintAnimation({
           if (reduced) return <g key={k}>{polys}</g>;
           const t = sliceAppear(k);
           return (
-            <motion.g
+            <m.g
               key={k}
               initial={false}
               animate={{
@@ -290,13 +290,13 @@ export function ScanPrintAnimation({
               }}
             >
               {polys}
-            </motion.g>
+            </m.g>
           );
         })}
 
         {/* print head stepping up as layers appear */}
         {!reduced && (
-          <motion.g
+          <m.g
             initial={false}
             animate={{ y: HEAD_Y, opacity: HEAD_OPACITY }}
             transition={{
@@ -319,7 +319,7 @@ export function ScanPrintAnimation({
             {/* nozzle */}
             <path d={`M ${RIGHT_CX - 7} 1 h 14 l -5 9 h -4 Z`} fill="#FF7A1A" />
             <circle cx={RIGHT_CX} cy="13" r="1.8" fill="#2BD4CC" />
-          </motion.g>
+          </m.g>
         )}
       </g>
 

@@ -2,7 +2,7 @@
 
 import { useCallback, useState } from "react";
 import Image from "next/image";
-import { motion, useReducedMotion } from "framer-motion";
+import { m, useReducedMotion } from "framer-motion";
 import { UploadCloud, Clock, MapPin, Layers, ShieldCheck } from "lucide-react";
 import type { Dictionary } from "@/lib/i18n";
 import { setPendingUpload } from "@/lib/upload-store";
@@ -95,7 +95,7 @@ export function Hero({ dict }: { dict: Dictionary }) {
 
       {/* one-time scan-line sweep — the signature motif, subtle */}
       {!reduced && (
-        <motion.div
+        <m.div
           aria-hidden
           className="pointer-events-none absolute inset-x-0 -z-10 h-24"
           style={{
@@ -113,24 +113,24 @@ export function Hero({ dict }: { dict: Dictionary }) {
         <div className="grid items-center gap-10 py-16 sm:py-20 lg:grid-cols-[1.05fr_0.95fr]">
           {/* left: copy + trust strip */}
           <div className="max-w-xl">
-            <motion.p {...enter(0)} className="kicker">
+            <m.p {...enter(0)} className="kicker">
               {dict.hero.kicker}
-            </motion.p>
-            <motion.h1
+            </m.p>
+            <m.h1
               {...enter(0.08)}
               className="mt-4 font-display text-4xl font-bold leading-[1.08] tracking-tight text-ink drop-shadow-[0_2px_24px_rgba(11,31,51,0.6)] sm:text-5xl lg:text-6xl"
             >
               {dict.hero.title}
-            </motion.h1>
-            <motion.p
+            </m.h1>
+            <m.p
               {...enter(0.16)}
               className="mt-5 max-w-lg text-base leading-relaxed text-mist/80 sm:text-lg"
             >
               {dict.hero.lead}
-            </motion.p>
+            </m.p>
 
             {/* trust strip — answers "is it safe to upload?" next to the drop-zone */}
-            <motion.ul
+            <m.ul
               {...enter(0.34)}
               className="mt-8 flex flex-wrap gap-x-5 gap-y-2.5"
             >
@@ -143,11 +143,11 @@ export function Hero({ dict }: { dict: Dictionary }) {
                   {label}
                 </li>
               ))}
-            </motion.ul>
+            </m.ul>
           </div>
 
           {/* right: the primary action — upload drop-zone */}
-          <motion.div {...enter(0.24)}>
+          <m.div {...enter(0.24)}>
             <label
               onDragOver={(e) => {
                 e.preventDefault();
@@ -186,7 +186,7 @@ export function Hero({ dict }: { dict: Dictionary }) {
                 {dict.estimator.dropFormats}
               </p>
             </label>
-          </motion.div>
+          </m.div>
         </div>
       </div>
     </section>

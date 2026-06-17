@@ -6,7 +6,7 @@ import { getDictionary, isLocale, locales, type Locale } from "@/lib/i18n";
 import { SITE } from "@/lib/site";
 import { Analytics } from "@/components/Analytics";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
-import { SmoothScroll } from "@/components/SmoothScroll";
+import { MotionProvider } from "@/components/MotionProvider";
 
 const manrope = Manrope({
   subsets: ["latin", "latin-ext"],
@@ -106,7 +106,7 @@ export default async function LocaleLayout({
         <script dangerouslySetInnerHTML={{ __html: themeInit }} />
       </head>
       <body className="font-body">
-        <SmoothScroll>{children}</SmoothScroll>
+        <MotionProvider>{children}</MotionProvider>
         <WhatsAppButton locale={locale} />
         <Analytics />
       </body>

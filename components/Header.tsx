@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, Moon, Sun, X } from "lucide-react";
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import { AnimatePresence, m, useReducedMotion } from "framer-motion";
 import type { Dictionary, Locale } from "@/lib/i18n";
 import { LOCALE_COOKIE, locales } from "@/lib/i18n";
 import { useScrollToId } from "@/lib/use-scroll-to";
@@ -91,7 +91,7 @@ export function Header({ dict, locale }: { dict: Dictionary; locale: Locale }) {
 
       <AnimatePresence>
         {open && (
-          <motion.nav
+          <m.nav
             initial={reduced ? false : { height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={reduced ? undefined : { height: 0, opacity: 0 }}
@@ -118,7 +118,7 @@ export function Header({ dict, locale }: { dict: Dictionary; locale: Locale }) {
                 {dict.nav.getQuote}
               </a>
             </div>
-          </motion.nav>
+          </m.nav>
         )}
       </AnimatePresence>
     </header>

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import { AnimatePresence, m, useReducedMotion } from "framer-motion";
 import type { Dictionary } from "@/lib/i18n";
 
 /** Slim dark bar above the nav, rotating short messages. */
@@ -27,7 +27,7 @@ export function AnnouncementBar({ dict }: { dict: Dictionary }) {
     >
       <div className="section-wrap flex h-9 items-center justify-center overflow-hidden">
         <AnimatePresence mode="wait" initial={false}>
-          <motion.p
+          <m.p
             key={index}
             initial={reduced ? false : { y: 14, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -37,7 +37,7 @@ export function AnnouncementBar({ dict }: { dict: Dictionary }) {
           >
             <span className="mr-2 inline-block h-1.5 w-1.5 rounded-full bg-teal align-middle" />
             {messages[index]}
-          </motion.p>
+          </m.p>
         </AnimatePresence>
       </div>
     </div>
